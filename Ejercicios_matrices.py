@@ -161,10 +161,7 @@ def rotar_matriz(matriz: list[list]) -> list[list]:
     return resultado
 
 
-matriz1 = [[3, 1], [0, 5], [2, 6]]
-matriz2 = rotar_matriz(matriz1)
 
-print(matriz2)
 
 if __name__ == '__main__':
     menu()
