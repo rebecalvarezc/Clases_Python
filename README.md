@@ -16,7 +16,7 @@
 
 ## Tech Stack
 
-**PYTHON**
+**Python**
 
 ## Authors
 
