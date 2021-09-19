@@ -1,4 +1,3 @@
-# This is a sample Python script.
 # matriz = [[0 for x in range(3)] for x in range(2)]
 def crear_matriz(fila: int, columna: int) -> list[list]:
     matriz_madre = []
@@ -22,5 +21,5 @@ def crear_matriz(fila: int, columna: int) -> list[list]:
 # matriz = [[1, 2, 3], ]
 print(crear_matriz(2, 3))
 
-#Tarea: siempre que sea posible, hacer suma/resta y multiplicar matrices (Repasar). hace una función para cada una,
-#verificar errores, la transpuesta de una matriz (y rotar una matriz).
+# Tarea: siempre que sea posible, hacer suma/resta y multiplicar matrices (Repasar). hace una función para cada una,
+# verificar errores, la transpuesta de una matriz (y rotar una matriz).
