@@ -1,12 +1,12 @@
 # Clases de Python
 
-**_TODO:_** A brief description of what this project does and who it's for
+**_TODO:_** Este proyecto está asociado a la creación de matrices y las operaciones asociadas a las mismas.
 
 # Hi, I'm Rebeca Alvarez! 👋
 
 ## 🚀 About Me
 
-**_TODO:_** ...
+**_TODO:_** Ingeniero químico aprendiendo a programar en Python. 
 
 ## Roadmap
 
