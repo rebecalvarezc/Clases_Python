@@ -6,7 +6,7 @@ Este proyecto está asociado a la creación de matrices y las operaciones asocia
 
 ## 🚀 About Me
 
-**_TODO:_** Ingeniero químico aprendiendo a programar en Python. 
+Ingeniero químico aprendiendo a programar en Python. 
 
 ## Roadmap
 
