@@ -1,11 +1,10 @@
 # Suma y resta de matrices.
-
 def menu():
     print('Bienvenido al programa de matrices.')
     print('-----------------------------------')
     print('''\nSeleccione la operación que desea realizar:
-    1.- Sumar matrices.
-    2.- Restar natrices.''')
+        1.- Sumar matrices.
+        2.- Restar natrices.''')
     operador = int(input('\n -->: '))
     return operador
 
@@ -48,13 +47,6 @@ def sumar_restar_matrices(matriz1: list[list], matriz2: list[list]) -> list[list
             break
 
 
-matriz1 = [[3, 1], [0, 5]]
-matriz2 = [[-1, 2], [2, 5]]
-
-suma = sumar_restar_matrices(matriz1, matriz2)
-print(suma)
-
-
 # Multiplicación de matrices
 
 def multiplicar_matriz(matriz1: list[list], matriz2: list[list]) -> list[list]:
@@ -88,13 +80,6 @@ def multiplicar_matriz(matriz1: list[list], matriz2: list[list]) -> list[list]:
             print('Error. Las matrices no cumplen con los requisitos de la multiplicación de matrices.')
 
 
-matriz1 = [[3, 1], [0, 5]]
-matriz2 = [[-1, 2], [2, 5]]
-
-matriz3 = multiplicar_matriz(matriz1, matriz2)
-print(matriz3)
-
-
 # Traspuesta de una matriz
 
 def traspuesta(matriz: list[list]) -> list[list]:
@@ -108,7 +93,7 @@ def traspuesta(matriz: list[list]) -> list[list]:
         [9, 10, 11, 12]
     ]
 
-    === Propuesta 1: ===
+   # === Propuesta 1: ===
     transpuesta = []
 
     for j in range(len(matriz[0])):
@@ -139,12 +124,6 @@ def traspuesta(matriz: list[list]) -> list[list]:
         print('La función solo acepta variables de tipo list.')
 
 
-matriz1 = [[3, 1], [0, 5]]
-matriz2 = traspuesta(matriz1)
-
-print(matriz2)
-
-
 # Rotar matriz
 
 def rotar_matriz(matriz: list[list]) -> list[list]:
@@ -161,11 +140,21 @@ def rotar_matriz(matriz: list[list]) -> list[list]:
     return resultado
 
 
-
-
 if __name__ == '__main__':
     menu()
-    sumar_restar_matrices()
-    traspuesta()
-    multiplicar_matriz()
-    rotar_matriz()
+    matriz1 = [[3, 1], [0, 5]]
+    matriz2 = traspuesta(matriz1)
+
+    print(matriz2)
+
+    matriz1 = [[3, 1], [0, 5]]
+    matriz2 = [[-1, 2], [2, 5]]
+
+    matriz3 = multiplicar_matriz(matriz1, matriz2)
+    print(matriz3)
+
+    matriz1 = [[3, 1], [0, 5]]
+    matriz2 = [[-1, 2], [2, 5]]
+
+    suma = sumar_restar_matrices(matriz1, matriz2)
+    print(suma)

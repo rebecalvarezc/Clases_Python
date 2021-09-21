@@ -1,3 +1,3 @@
-from matrices.matrices import multiplicar_matriz
+from matrices import multiplicar_matriz
 
-multiplicar_matriz([[2, 1], [1, 2]], [[2, 1], [1, 2]])
+print(multiplicar_matriz([[2, 1], [1, 2]], [[2, 1], [1, 2]]))
