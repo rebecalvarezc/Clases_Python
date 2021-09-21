@@ -1,6 +1,6 @@
 # Clases de Python
 
-**_TODO:_** Este proyecto está asociado a la creación de matrices y las operaciones asociadas a las mismas.
+Este proyecto está asociado a la creación de matrices y las operaciones asociadas a las mismas.
 
 # Hi, I'm Rebeca Alvarez! 👋
 
