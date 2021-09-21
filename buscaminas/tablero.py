@@ -19,9 +19,6 @@
 #  En esta función mostraremos 2 tableros, un tablero que llamaremos visible (que es el que verá el usuario)
 #  en donde cada posición será un guion "-" y otro tablero que llamaremos oculto, que rellenaremos con ceros (0)
 #  y es en ese tablero oculto donde se colocarán las minas.
-import random
-
-
 class Buscaminas:
     """Plantilla para crear los tableros de buscaminas"""
 
@@ -61,10 +58,11 @@ class Buscaminas:
         :return: list[list]
         """
         from copy import deepcopy
+        from random import randint
         self.tablero_minas = deepcopy(self.tablero_base)
         for minas in range(self.nro_minas):
-            i = random.randint(0, self.filas - 1)
-            j = random.randint(0, self.columnas - 1)
+            i = randint(0, self.filas - 1)
+            j = randint(0, self.columnas - 1)
             self.coordenadas.append([i, j])
             self.tablero_minas[i].insert(j, 9)
 
