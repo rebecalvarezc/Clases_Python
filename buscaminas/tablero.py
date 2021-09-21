@@ -13,7 +13,7 @@
 # TODO: Escribir una función que permita insertar las minas en el tablero y guardar las coordenadas de las minas.
 #  Esta función deberá recibir el tablero, sus filas y columnas y la cantidad de minas que se van a insertar en el
 #  tablero. Para representar una mina usaremos el número 9. Esta función deberá retornar el tablero con las minas
-#  y una lista con las coordenadas de las minas.
+#  y una lista con las coordenadas de las minas. ¡Las minas se deben insertar en el tablero de manera aleatoria!
 
 # TODO: Escribir una función para mostrar el tablero con las minas en la consola.
 #  En esta función mostraremos 2 tableros, un tablero que llamaremos visible (que es el que verá el usuario)
