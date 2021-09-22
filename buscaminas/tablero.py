@@ -50,7 +50,7 @@ class Buscaminas:
         Esta función se encarga de imprimir el tablero de buscaminas creado por el usuario.
         :return: str
         """
-        for i in self.tablero_visible:
+        for i in self.tablero_base:
             print(i, end='\n')
 
     def insertar_minas(self):
@@ -82,57 +82,3 @@ class Buscaminas:
                     self.tablero_oculto[i].append(9)
 
         return self.tablero_visible, self.tablero_oculto
-
-
-def tablero_movimientos_jugador(tablero: list[list]):
-    """
-    Esta función se encarga de imprimir los movimientos del jugador en la pantalla.
-    """
-
-    for i in tablero_visible: # se imprime el tablero de -
-        print(i, end='\n')
-
-def juego():
-    """
-    Esta función simula el click del jugador en la casilla del buscaminas.
-    """
-    lista_movimientos = []
-    while True:
-        print('''Desde su posición puede realizar los siguientes movimientos:
-        1) w = arriba
-        2) s = abajo
-        3) a = izquierda (<---)
-        4) d = derecha (--->)
-        ''')
-        movimiento = input('Indique el movimiento que desea realizar: \n--> ').lower()
-
-        if movimiento == 'w':
-            lista_movimientos.append(movimiento)
-            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
-            if juego.lower() == 's':
-                continue
-            else:
-                break
-        elif movimiento.lower() == 's':
-            lista_movimientos.append(movimiento)
-            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
-            if juego.lower() == 's':
-                continue
-            else:
-                break
-        elif movimiento.lower() == 'a':
-            lista_movimientos.append(movimiento)
-            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
-            if juego.lower() == 's':
-                continue
-            else:
-                break
-        elif movimiento.lower == 'd':
-            lista_movimientos.append(movimiento)
-            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
-            if juego.lower() == 's':
-                continue
-            else:
-                break
-        else:
-            print('Error. Ingrese una opción válida\n')
