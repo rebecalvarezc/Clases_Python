@@ -6,9 +6,6 @@ os.system('cls')
 
 
 class Buscaminas:
-
-
-
     """Plantilla para crear los tableros de buscaminas"""
 
     def __init__(self, filas: int, columnas: int):
@@ -27,8 +24,8 @@ class Buscaminas:
         :return: una matriz de dimensión filas x columnas.
         """
 
-        self.tablero_base = [['-' for j in range(self.columnas)] for i in range(self.filas)]
-        self.tablero_oculto = [[0 for j in range(self.columnas)] for i in range(self.filas)]
+        self.tablero_base = [['-' for _ in range(self.columnas)] for _ in range(self.filas)]
+        self.tablero_oculto = [[0 for _ in range(self.columnas)] for _ in range(self.filas)]
 
         return deepcopy(self.tablero_base)
 
