@@ -19,6 +19,7 @@
 #  En esta función mostraremos 2 tableros, un tablero que llamaremos visible (que es el que verá el usuario)
 #  en donde cada posición será un guion "-" y otro tablero que llamaremos oculto, que rellenaremos con ceros (0)
 #  y es en ese tablero oculto donde se colocarán las minas.
+
 class Buscaminas:
     """Plantilla para crear los tableros de buscaminas"""
 
@@ -32,7 +33,7 @@ class Buscaminas:
         self.tablero_visible = []
         self.tablero_oculto = []
 
-    def crear_tablero(self, valor: str = 'x') -> list[list]:
+    def crear_tablero(self, valor: str = '-') -> list[list]:
         """
         Esta función se encarga de crear el tablero base para el juego de buscaminas,
         mediante los valores proporcionados por el usuario.
@@ -46,10 +47,10 @@ class Buscaminas:
 
     def mostrar_tablero(self):
         """
-        Esta función se encarga de imprimir el tablero de buscaminas creado por el ususario.
+        Esta función se encarga de imprimir el tablero de buscaminas creado por el usuario.
         :return: str
         """
-        for i in self.tablero_base:
+        for i in self.tablero_visible:
             print(i, end='\n')
 
     def insertar_minas(self):
@@ -81,3 +82,57 @@ class Buscaminas:
                     self.tablero_oculto[i].append(9)
 
         return self.tablero_visible, self.tablero_oculto
+
+
+def tablero_movimientos_jugador(tablero: list[list]):
+    """
+    Esta función se encarga de imprimir los movimientos del jugador en la pantalla.
+    """
+
+    for i in tablero_visible: # se imprime el tablero de -
+        print(i, end='\n')
+
+def juego():
+    """
+    Esta función simula el click del jugador en la casilla del buscaminas.
+    """
+    lista_movimientos = []
+    while True:
+        print('''Desde su posición puede realizar los siguientes movimientos:
+        1) w = arriba
+        2) s = abajo
+        3) a = izquierda (<---)
+        4) d = derecha (--->)
+        ''')
+        movimiento = input('Indique el movimiento que desea realizar: \n--> ').lower()
+
+        if movimiento == 'w':
+            lista_movimientos.append(movimiento)
+            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
+            if juego.lower() == 's':
+                continue
+            else:
+                break
+        elif movimiento.lower() == 's':
+            lista_movimientos.append(movimiento)
+            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
+            if juego.lower() == 's':
+                continue
+            else:
+                break
+        elif movimiento.lower() == 'a':
+            lista_movimientos.append(movimiento)
+            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
+            if juego.lower() == 's':
+                continue
+            else:
+                break
+        elif movimiento.lower == 'd':
+            lista_movimientos.append(movimiento)
+            juego = input('Escriba "s" para realizar otro movimiento: \n--> ')
+            if juego.lower() == 's':
+                continue
+            else:
+                break
+        else:
+            print('Error. Ingrese una opción válida\n')
