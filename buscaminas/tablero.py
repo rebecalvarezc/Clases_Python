@@ -6,6 +6,9 @@ os.system('cls')
 
 
 class Buscaminas:
+
+
+
     """Plantilla para crear los tableros de buscaminas"""
 
     def __init__(self, filas: int, columnas: int):
