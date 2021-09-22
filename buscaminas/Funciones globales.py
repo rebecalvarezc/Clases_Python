@@ -27,7 +27,6 @@ def juego(tablero: list[list[str]]):
 
     lista_movimientos = []
     while True:
-        tablero_movimientos_jugador(tablero)
 
         print('''Desde su posición puede realizar los siguientes movimientos:
         1) w = arriba
@@ -73,5 +72,5 @@ juego1 = Buscaminas(12, 15, 8)
 juego1.crear_tablero()
 juego1.insertar_minas()
 tabla1, tabla2 = juego1.mostrar_tablero_minas()
-posicion = tablero_movimientos_jugador(tabla1)
-print(posicion)
+posicion = tablero_posicion_inicial(tabla1)
+mostrar_tablero_jugador(posicion)
