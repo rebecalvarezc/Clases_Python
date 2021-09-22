@@ -1,7 +1,7 @@
 from copy import deepcopy  # Alt+Enter
 from random import randint
 from typing import Callable
-import os    # Te permite acceder a todo el contenido de tu sistema operativo
+import os    # Te permite acceder a to_do el contenido de tu sistema operativo
 os.system('cls')
 
 
