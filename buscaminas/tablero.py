@@ -103,7 +103,6 @@ class Buscaminas:
                             self.tablero_base[f + x][c + y] = self.tablero_oculto[f + x][c + y]  # la muestro
         return self.tablero_base
 
-
     def movimientos(self, mov: Callable):
         """
         Esta función simula el click del jugador en la casilla del buscaminas.
