@@ -107,6 +107,14 @@ class Buscaminas:
                     self.tablero_base[i][j] = posicion  # 'x' ---> '-'
                     j += 1
                     self.tablero_base[i][j] = 'x'  # '-' --> 'x'
+            elif ejecutar == 'm':
+                self.tablero_base[i][j] = '#'
+                posicion, i, j = self.tablero_posicion_inicial()
+                self.tablero_base[i][j] = 'x'
+            elif ejecutar == 'n':
+                self.tablero_base[i][j] = '-'
+                posicion, i, j = self.tablero_posicion_inicial()
+                self.tablero_base[i][j] = 'x'
             else:
                 print('Error. Ingrese una opción válida\n')
             os.system('cls')
