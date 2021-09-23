@@ -1,7 +1,8 @@
 from copy import deepcopy  # Alt+Enter
 from random import randint
 from typing import Callable
-import os    # Te permite acceder a to_do el contenido de tu sistema operativo
+import os  # Te permite acceder a to_do el contenido de tu sistema operativo
+
 os.system('cls')
 
 
@@ -20,7 +21,6 @@ class Buscaminas:
         Esta función se encarga de crear el tablero base para el juego de buscaminas,
         mediante los valores proporcionados por el usuario.
 
-        :param valor: (opcional) str = 'x'
         :return: una matriz de dimensión filas x columnas.
         """
 
@@ -83,7 +83,7 @@ class Buscaminas:
                 if i == 0:
                     pass
                 else:
-                    self.tablero_base[i][j] = posicion # 'x' ---> '-'
+                    self.tablero_base[i][j] = posicion  # 'x' ---> '-'
                     i -= 1
                     self.tablero_base[i][j] = 'x'  # '-' --> 'x'
             elif ejecutar == 's':
