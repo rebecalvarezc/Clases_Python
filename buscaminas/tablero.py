@@ -51,7 +51,6 @@ class Buscaminas:
             j = randint(0, self.columnas - 1)
             self.coordenadas.append((i, j))
             self.tablero_oculto[i][j] = 9
-
         return self.tablero_oculto, self.coordenadas
 
     def tablero_posicion_inicial(self):
@@ -74,7 +73,7 @@ class Buscaminas:
         Esta función simula el click del jugador en la casilla del buscaminas.
         """
         posicion, i, j = self.tablero_posicion_inicial()
-
+        tablero_oculto, coordenadas = self.insertar_minas()
         condicion = True
 
         while condicion:
@@ -129,13 +128,17 @@ class Buscaminas:
                 posicion = self.tablero_base[i][j]
 
             elif ejecutar == 'z':
-                if self.coordenadas.count((i, j)) != 0:
-                    self.mostrar_tablero(self.tablero_oculto)
-                    print('Te paraste sobre una mina, has perdido!')
+                if coordenadas.count((i, j)) != 0:
+                    condicion = False
                 else:
                     pass
 
             else:
                 print('Error. Ingrese una opción válida\n')
+
             os.system('cls')
             self.mostrar_tablero(self.tablero_base)
+
+        os.system('cls')
+        self.mostrar_tablero(tablero_oculto)
+        print('\nPerdiste :(')
