@@ -50,7 +50,6 @@ class Buscaminas:
             i = randint(0, self.filas - 1)
             j = randint(0, self.columnas - 1)
             self.coordenadas.append((i, j))
-            # self.tablero_oculto[i].insert(j, 9)
             self.tablero_oculto[i][j] = 9
 
         return self.tablero_oculto, self.coordenadas
