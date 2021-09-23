@@ -45,7 +45,7 @@ class Buscaminas:
         Esta función se encarga de insertar el numero de minas dado en el tablero base de forma aleatoria.
         :return: list[list]
         """
-        nro_minas = round((self.filas * self.columnas) / 5)
+        nro_minas = round((self.filas * self.columnas) / 8)
         for minas in range(nro_minas):
             i = randint(0, self.filas - 1)
             j = randint(0, self.columnas - 1)
@@ -60,12 +60,12 @@ class Buscaminas:
         for i in range(self.filas):
             for j in range(self.columnas):
                 if self.tablero_oculto[i][j] == 9:
-
                     for x in range(-1, 2):
                         for y in range(-1, 2):
-                            if 0 <= i + x < self.filas and 0 <= j + y < self.columnas:
+                            if 0 <= i + x <= self.filas - 1 and 0 <= j + y <= self.columnas - 1:
                                 if self.tablero_oculto[i + x][j + y] != 9:
                                     self.tablero_oculto[i + x][j + y] += 1
+
         return self.tablero_oculto
 
     def tablero_posicion_inicial(self):
@@ -87,19 +87,18 @@ class Buscaminas:
         """
         Función algoritmo de difusión para descubrir el tablero.
         """
-        lista_coordenadas = [[i, j]]  # Agrego las coordenadas a una lista
+        lista_coordenadas = [(i, j)]  # Agrego las coordenadas a una lista
         while len(lista_coordenadas) != 0:  # TRICKY!!!!!
             f, c = lista_coordenadas.pop()  # saco las coordenadas
-            for x in range(-1, 1):
-                for y in range(-1, 1):  # para las posiciones circundantes:
-                    if 0 <= f + x < self.filas and 0 <= c + y < self.columnas:  # compruebo que estoy dentro del rango
-                        if self.tablero_base[f + x][c + y] == '-' and self.tablero_oculto[f + x][
-                            c + y] == 0:  # compruebo si la posición a descubrir es 0
-                            self.tablero_base[f + x][c + y] = 0  # la abro y le pongo el cero
-                            if lista_coordenadas.count([f + x, c + y]) == 0:  # si la coordenada lo esta en la lista
-                                lista_coordenadas.append([f + x, c + y])  # la agrego
-                        elif self.tablero_base[f + x][c + y] == '-' and self.tablero_oculto[f + x][
-                            c + y] != 0:  # si la condición está tapada y no es cero
+            for x in range(-1, 2):
+                for y in range(-1, 2):  # para las posiciones circundantes:
+                    if 0 <= f + x <= self.filas - 1 and 0 <= c + y <= self.columnas - 1:  # compruebo que estoy dentro del rango
+                        if self.tablero_base[f + x][c + y] == '-' and self.tablero_oculto[f + x][c + y] == 0:
+                            self.tablero_base[f + x][c + y] = ' '  # la abro y le pongo el cero
+
+                            if (f + x, c + y) not in lista_coordenadas:  # si la coordenada lo esta en la lista
+                                lista_coordenadas.append((f + x, c + y))  # la agrego
+                        else:
                             self.tablero_base[f + x][c + y] = self.tablero_oculto[f + x][c + y]  # la muestro
         return self.tablero_base
 
@@ -107,8 +106,10 @@ class Buscaminas:
         """
         Esta función simula el click del jugador en la casilla del buscaminas.
         """
+        self.crear_tablero()
         posicion, i, j = self.tablero_posicion_inicial()
         tablero_oculto, coordenadas = self.insertar_minas()
+        self.tablero_pistas()
         condicion = True
 
         while condicion:
@@ -165,22 +166,27 @@ class Buscaminas:
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
 
-                if coordenadas.count((i, j)) != 0:
+                if coordenadas.count((i, j)) != 0:  # if q == 9:
+                    self.tablero_base[i][j] = '@'
                     condicion = False
-                else:
-                    if q != 0:
-                        self.tablero_base[i][j] = q
-                        posicion = q
-                    elif q == 0:
-                        self.tablero_base[i][j] = q
-                        self.algoritmo_difusion(i, j)
-                        posicion = q
+                elif q != 0:
+                    self.tablero_base[i][j] = q
+                    posicion = q
+                elif q == 0:
+                    self.tablero_base[i][j] = ' '
+                    self.algoritmo_difusion(i, j)
+                    for i in range(self.filas):
+                        for j in range(self.columnas):
+                            if self.tablero_base[i][j] == 0:
+                                self.tablero_base[i][j] = ' '
+                    posicion = q
             else:
                 print('Error. Ingrese una opción válida\n')
 
             os.system('cls')
+
             self.mostrar_tablero(self.tablero_base)
 
         os.system('cls')
-        self.mostrar_tablero(tablero_oculto)
+        self.mostrar_tablero(self.tablero_base)
         print('\nPerdiste :(')
