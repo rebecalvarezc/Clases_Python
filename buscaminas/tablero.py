@@ -29,7 +29,8 @@ class Buscaminas:
 
         return deepcopy(self.tablero_base)
 
-    def mostrar_tablero(self, tablero: list[list] = None):
+    @staticmethod
+    def mostrar_tablero(tablero: list[list] = None):
         """
         Esta función se encarga de imprimir el tablero de buscaminas creado por el usuario.
         :return: str
