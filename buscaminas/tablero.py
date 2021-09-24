@@ -111,6 +111,7 @@ class Buscaminas:
         tablero_oculto, coordenadas = self.insertar_minas()
         self.tablero_pistas()
         condicion = True
+        minas_marcadas = []
 
         while condicion:
             ejecutar = mov()
@@ -120,48 +121,54 @@ class Buscaminas:
                     pass
                 else:
                     self.tablero_base[i][j] = posicion  # 'x' ---> '-'
-                    posicion = '-'
                     i -= 1
-                    if self.tablero_base[i][j] == '-':
-                        self.tablero_base[i][j] = 'x'  # '-' --> 'x'
+                    posicion = self.tablero_base[i][j]
+                    self.tablero_base[i][j] = 'x'
 
             elif ejecutar == 's':
                 if i == self.filas - 1:
                     pass
                 else:
                     self.tablero_base[i][j] = posicion  # 'x' ---> '-'
-                    posicion = '-'
                     i += 1
-                    if self.tablero_base[i][j] == '-':
-                        self.tablero_base[i][j] = 'x'  # '-' --> 'x'
+                    posicion = self.tablero_base[i][j]
+                    self.tablero_base[i][j] = 'x'
 
             elif ejecutar == 'a':
                 if j == 0:
                     pass
                 else:
                     self.tablero_base[i][j] = posicion  # 'x' ---> '-'
-                    posicion = '-'
                     j -= 1
-                    if self.tablero_base[i][j] == '-':
-                        self.tablero_base[i][j] = 'x'  # '-' --> 'x'
+                    posicion = self.tablero_base[i][j]
+                    self.tablero_base[i][j] = 'x'
 
             elif ejecutar == 'd':
                 if j == self.columnas - 1:
                     pass
                 else:
                     self.tablero_base[i][j] = posicion  # 'x' ---> '-'
-                    posicion = '-'
                     j += 1
-                    if self.tablero_base[i][j] == '-':
-                        self.tablero_base[i][j] = 'x'  # '-' --> 'x'
+                    posicion = self.tablero_base[i][j]
+                    self.tablero_base[i][j] = 'x'
 
             elif ejecutar == 'm':
-                self.tablero_base[i][j] = '#'
                 posicion = self.tablero_base[i][j]
+                self.tablero_base[i][j] = '#'
+                minas_marcadas.append([i, j])
+
+                if len(minas_marcadas) == len(self.coordenadas):
+                    pass
 
             elif ejecutar == 'n':
-                self.tablero_base[i][j] = '-'
-                posicion = self.tablero_base[i][j]
+
+                if posicion == 'x':
+                    self.tablero_base[i][j] = 'x'
+                    minas_marcadas.remove([i, j])
+                    posicion = '-'
+                else:
+                    self.tablero_base[i][j] = posicion
+                    minas_marcadas.remove([i, j])
 
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
@@ -175,11 +182,8 @@ class Buscaminas:
                 elif q == 0:
                     self.tablero_base[i][j] = ' '
                     self.algoritmo_difusion(i, j)
-                    for i in range(self.filas):
-                        for j in range(self.columnas):
-                            if self.tablero_base[i][j] == 0:
-                                self.tablero_base[i][j] = ' '
-                    posicion = q
+                    self.tablero_base = [[' ' if self.tablero_base[i][j] == 0 else self.tablero_base[i][j] for j in range(self.columnas)] for i in range(self.filas)]
+                    posicion = self.tablero_base[i][j]
             else:
                 print('Error. Ingrese una opción válida\n')
 
@@ -187,6 +191,11 @@ class Buscaminas:
 
             self.mostrar_tablero(self.tablero_base)
 
-        os.system('cls')
-        self.mostrar_tablero(self.tablero_base)
-        print('\nPerdiste :(')
+        if self.tablero_base[i][j] == '@':
+            os.system('cls')
+            self.mostrar_tablero(self.tablero_base)
+            print('\nPerdiste :(')
+        else:
+            os.system('cls')
+            self.mostrar_tablero(self.tablero_base)
+            print(f'\nGanaste! :). Encontraste las {len(self.coordenadas)} minas!')
