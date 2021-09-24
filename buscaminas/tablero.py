@@ -9,7 +9,7 @@ os.system('cls')
 class Buscaminas:
     """Plantilla para crear los tableros de buscaminas"""
 
-    def __init__(self, filas: int, columnas: int):
+    def __init__(self, filas: int = 12, columnas: int = 15):
         self.filas = filas
         self.columnas = columnas
         self.tablero_base = []
@@ -153,7 +153,7 @@ class Buscaminas:
                     self.tablero_base[i][j] = 'x'
 
 
-
+            # INICIO AREA DE PROBLEMAS
             elif ejecutar == 'm':
                 posicion = self.tablero_base[i][j]
                 self.tablero_base[i][j] = '#'
@@ -168,7 +168,7 @@ class Buscaminas:
                     self.tablero_base[i][j] = posicion
                     minas_marcadas.pop((i, j))
 
-
+            # FIN AREA DE PROBLEMAS
 
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
