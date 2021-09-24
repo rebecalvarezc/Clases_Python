@@ -81,7 +81,7 @@ class Buscaminas:
         posicion_inicial = self.tablero_base[i][j]
         self.tablero_base[i][j] = 'x'
         self.mostrar_tablero(self.tablero_base)
-        return posicion_inicial, i, j
+        return i, j
 
     def algoritmo_difusion(self, i: int, j: int):
         """
@@ -107,7 +107,7 @@ class Buscaminas:
         Esta función simula el click del jugador en la casilla del buscaminas.
         """
         self.crear_tablero()
-        posicion, i, j = self.tablero_posicion_inicial()
+        i, j = self.tablero_posicion_inicial()
         tablero_oculto, coordenadas = self.insertar_minas()
         self.tablero_pistas()
         minas_marcadas = []
@@ -152,23 +152,21 @@ class Buscaminas:
                     posicion = self.tablero_base[i][j]
                     self.tablero_base[i][j] = 'x'
 
-
-            # INICIO AREA DE PROBLEMAS
             elif ejecutar == 'm':
-                posicion = self.tablero_base[i][j]
-                self.tablero_base[i][j] = '#'
                 minas_marcadas.append((i, j))
-
-                if minas_marcadas == coordenadas:
-                    condicion = False
+                if len(minas_marcadas) == len(self.coordenadas):
+                    if minas_marcadas.sort() == self.coordenadas.sort():
+                        self.tablero_base[i][j] = '#'
+                        condicion = False
                 else:
-                    pass
+                    posicion = '#'
+                    self.tablero_base[i][j] = '#'
 
             elif ejecutar == 'n':
-                    self.tablero_base[i][j] = posicion
-                    minas_marcadas.pop((i, j))
-
-            # FIN AREA DE PROBLEMAS
+                posicion = '-'
+                self.tablero_base[i][j] = posicion
+                minas_marcadas.remove((i, j))
+                print(minas_marcadas)
 
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
@@ -182,7 +180,9 @@ class Buscaminas:
                 elif q == 0:
                     self.tablero_base[i][j] = ' '
                     self.algoritmo_difusion(i, j)
-                    self.tablero_base = [[' ' if self.tablero_base[i][j] == 0 else self.tablero_base[i][j] for j in range(self.columnas)] for i in range(self.filas)]
+                    self.tablero_base = [
+                        [' ' if self.tablero_base[i][j] == 0 else self.tablero_base[i][j] for j in range(self.columnas)]
+                        for i in range(self.filas)]
                     posicion = self.tablero_base[i][j]
             else:
                 print('Error. Ingrese una opción válida\n')
