@@ -81,7 +81,7 @@ class Buscaminas:
         posicion_inicial = self.tablero_base[i][j]
         self.tablero_base[i][j] = 'x'
         self.mostrar_tablero(self.tablero_base)
-        return i, j
+        return i, j, posicion_inicial
 
     def algoritmo_difusion(self, i: int, j: int):
         """
@@ -107,7 +107,7 @@ class Buscaminas:
         Esta función simula el click del jugador en la casilla del buscaminas.
         """
         self.crear_tablero()
-        i, j = self.tablero_posicion_inicial()
+        i, j, posicion = self.tablero_posicion_inicial()
         tablero_oculto, coordenadas = self.insertar_minas()
         self.tablero_pistas()
         minas_marcadas = []
@@ -188,7 +188,6 @@ class Buscaminas:
                 print('Error. Ingrese una opción válida\n')
 
             os.system('cls')
-
             self.mostrar_tablero(self.tablero_base)
 
         if self.tablero_base[i][j] == '@':
