@@ -110,8 +110,8 @@ class Buscaminas:
         posicion, i, j = self.tablero_posicion_inicial()
         tablero_oculto, coordenadas = self.insertar_minas()
         self.tablero_pistas()
-        condicion = True
         minas_marcadas = []
+        condicion = True
 
         while condicion:
             ejecutar = mov()
@@ -152,23 +152,23 @@ class Buscaminas:
                     posicion = self.tablero_base[i][j]
                     self.tablero_base[i][j] = 'x'
 
+
+
             elif ejecutar == 'm':
                 posicion = self.tablero_base[i][j]
                 self.tablero_base[i][j] = '#'
-                minas_marcadas.append([i, j])
+                minas_marcadas.append((i, j))
 
-                if len(minas_marcadas) == len(self.coordenadas):
+                if minas_marcadas == coordenadas:
+                    condicion = False
+                else:
                     pass
 
             elif ejecutar == 'n':
-
-                if posicion == 'x':
-                    self.tablero_base[i][j] = 'x'
-                    minas_marcadas.remove([i, j])
-                    posicion = '-'
-                else:
                     self.tablero_base[i][j] = posicion
-                    minas_marcadas.remove([i, j])
+                    minas_marcadas.pop((i, j))
+
+
 
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
