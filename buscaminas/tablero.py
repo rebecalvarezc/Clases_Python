@@ -102,13 +102,13 @@ class Buscaminas:
                             self.tablero_base[f + x][c + y] = self.tablero_oculto[f + x][c + y]  # la muestro
         return self.tablero_base
 
-    def movimientos(self, mov: Callable):
+    def jugar(self, mov: Callable):
         """
         Esta función simula el click del jugador en la casilla del buscaminas.
         """
         self.crear_tablero()
-        i, j, posicion = self.tablero_posicion_inicial()
         tablero_oculto, coordenadas = self.insertar_minas()
+        i, j, posicion = self.tablero_posicion_inicial()
         self.tablero_pistas()
         minas_marcadas = []
         condicion = True
@@ -170,7 +170,6 @@ class Buscaminas:
 
             elif ejecutar == 'z':
                 q = self.tablero_oculto[i][j]
-
                 if coordenadas.count((i, j)) != 0:  # if q == 9:
                     self.tablero_base[i][j] = '@'
                     condicion = False
