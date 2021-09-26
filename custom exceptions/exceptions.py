@@ -43,8 +43,7 @@ class EdadIncorrecta(Exception):
         mensaje -- explicación del error
     """
 
-    def __init__(self, edad, mensaje='Introduce tu edad en números enteros, por favor.'):
-        self.edad = edad
+    def __init__(self, mensaje='Introduce tu edad en números enteros, por favor.'):
         self.mensaje = mensaje
         super().__init__(self.mensaje)
 
