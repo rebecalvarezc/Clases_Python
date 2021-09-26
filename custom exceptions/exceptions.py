@@ -33,3 +33,20 @@ class SalarioFueraDeRango(Exception):
 
     def __str__(self):
         return f'{self.salario}$ --> {self.mensaje}'
+
+
+class EdadIncorrecta(Exception):
+    """Excepción que se levanta cuando el usuario no introduce un número al preguntarle la edad.
+
+    Atributos:
+        edad -- edad introducida que no es del tipo entero y que causa el error
+        mensaje -- explicación del error
+    """
+
+    def __init__(self, edad, mensaje='Introduce tu edad en números enteros, por favor.'):
+        self.edad = edad
+        self.mensaje = mensaje
+        super().__init__(self.mensaje)
+
+    def __str__(self):
+        return f'Error. {self.mensaje}'

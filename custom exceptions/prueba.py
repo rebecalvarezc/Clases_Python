@@ -21,3 +21,11 @@ while True:
         print('El numero dado es muy grande, intenta de nuevo.\n')
 
 print('Felicidades, has adivinado :)')
+
+# Programa para que el usuario introduzca su salario.
+
+from exceptions import SalarioFueraDeRango
+
+salario = int(input('Introduzca el salario $: '))
+if not 5000 < salario < 15000:
+    raise SalarioFueraDeRango(salario)
