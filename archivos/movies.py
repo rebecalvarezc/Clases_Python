@@ -17,4 +17,21 @@ def write_to_file(file_name: str, database: dict):
     data.close()
 
 
-write_to_file('fav_movies', movies)
+# write_to_file('fav_movies.txt', movies)
+
+def human_print(file_name: str):
+    data = open(file_name, 'r')
+    database = [item.strip() for item in data.readlines()[1:]]
+    data.close()
+
+    for line in database:
+        movie_data = line.split(',')
+        movie_name = movie_data[0].capitalize()
+        movie_director = movie_data[1].capitalize()
+
+        print(f'The movie {movie_name} was directed by {movie_director}')
+
+
+
+human_print('fav_movies')
+
