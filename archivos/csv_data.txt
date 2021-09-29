@@ -1,0 +1,6 @@
+name,age,university,degree
+rebeca,27,UCV,engineer
+evelio,22,UCV,engineer
+rodney,27,UCV,programmer
+aaron,19,UV,chef
+andrea,27,MIT,programmer
