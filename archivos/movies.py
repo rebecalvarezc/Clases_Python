@@ -17,26 +17,24 @@ movies = [
 
 
 def write_to_file(file_name: str):
-    data = open(file_name, 'w')
-    movie_file = csv.writer(data)
-    movie_file.writerows([movie.values() for movie in movies])
+    data = open(file_name, 'w', newline='')
+    movie_file = csv.DictWriter(data, ['name', 'director'])
+    movie_file.writeheader()
+    movie_file.writerows(movies)
     data.close()
 
 
-#write_to_file('fav_movies.txt')
+# write_to_file('fav_movies.csv')
 
 
 def human_print(file_name: str):
     data = open(file_name, 'r')
-    movie_file = csv.reader(data)
-    # database = [item.strip() for item in data.readlines()[1:]]
+    movie_file = csv.DictReader(data)
+    for line in movie_file:
+        movie_name = line['name']
+        movie_director = line['director']
+        print(f'The movie {movie_name} was directed by {movie_director}')
     data.close()
-    print(movie_file)
-    # for line in movie_file:
-    #     movie_data = line.split(',')
-    #     movie_name = movie_data[0].capitalize()
-    #     movie_director = movie_data[1].capitalize()
-    #
-    #     print(f'The movie {movie_name} was directed by {movie_director}')
 
-human_print('fav_movies.txt')
+
+human_print('fav_movies.csv')
