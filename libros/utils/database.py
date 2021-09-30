@@ -10,12 +10,10 @@ def add_book(name: str, author: str):
 
 
 def delete_book(name: str):
-    i = 0
-    for book in books:
-        if book.get('name') == name:
-            books.pop(i)
-        else:
-            i += 1
+    global books
+    books = [book for book in books if
+             book.get('name') != name]  # variable creada dentro de la función que itera sobre ella misma
+    # python asume que es una variable local, por lo que necesitamos ese 'global'
 
 
 def book_status(name: str):
@@ -23,4 +21,5 @@ def book_status(name: str):
         if book.get('name') == name:
             book['status'] = True
         else:
-            print('Ese libro no se encuentra en la lista.')
+            print(f'\nEl libro {name} no se encuentra en la base de datos.')
+            break
