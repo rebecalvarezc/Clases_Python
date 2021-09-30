@@ -1,0 +1,17 @@
+[
+  {
+    "1": "Alicia",
+    "age": 53,
+    "status": "mother"
+  },
+  {
+    "name": "Aaron",
+    "age": 19,
+    "status": "brother"
+  },
+  {
+    "name": "Mariana",
+    "age": 25,
+    "status": "cousin"
+  }
+]

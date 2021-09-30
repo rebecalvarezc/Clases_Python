@@ -1,0 +1,2078 @@
+{
+  "Arica": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10006
+  },
+  "Camarones": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 15188
+  },
+  "General Lagos": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 16692
+  },
+  "Putre": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 16692
+  },
+  "Alto Hospicio": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 8,
+    "price": 8656
+  },
+  "Cami\u00f1a": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 7,
+    "price": 116263
+  },
+  "Colchane": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 7,
+    "price": 116263
+  },
+  "Huara": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 15188
+  },
+  "Iquique": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8656
+  },
+  "Pica": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 15188
+  },
+  "Pozo Almonte": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10247
+  },
+  "Antofagasta": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7924
+  },
+  "Calama": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8389
+  },
+  "Mar\u00eda Elena": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 9369
+  },
+  "Mejillones": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10271
+  },
+  "Ollag\u00fce": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 150000
+  },
+  "San Pedro De Atacama": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 9369
+  },
+  "Sierra Gorda": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 14653
+  },
+  "Taltal": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 7982
+  },
+  "Tocopilla": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 9369
+  },
+  "Alto Del Carmen": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "Caldera": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "Cha\u00f1aral": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7612
+  },
+  "Copiap\u00f3": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6425
+  },
+  "Diego De Almagro": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 7230
+  },
+  "Freirina": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "Huasco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "Tierra Amarilla": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 8,
+    "price": 7156
+  },
+  "Vallenar": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 7156
+  },
+  "Andacollo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8389
+  },
+  "Canela": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12262
+  },
+  "Combarbal\u00e1": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 11055
+  },
+  "Coquimbo": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Illapel": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7078
+  },
+  "La Higuera": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "La Serena": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Los Vilos": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6482
+  },
+  "Monte Patria": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12262
+  },
+  "Ovalle": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 6482
+  },
+  "Paihuano": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11055
+  },
+  "Punitaqui": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "R\u00edo Hurtado": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12262
+  },
+  "Salamanca": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 9691
+  },
+  "Vicu\u00f1a": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7344
+  },
+  "Algarrobo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Cabildo": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 6858
+  },
+  "Calera": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Calle Larga": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Cartagena": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Casablanca": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Catemu": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Conc\u00f3n": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "El Quisco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "El Tabo": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 1,
+    "price": 7078
+  },
+  "Hijuelas": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 5445
+  },
+  "Isla De Pascua": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11446
+  },
+  "Juan Fern\u00e1ndez": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 14020
+  },
+  "La Cruz": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 5445
+  },
+  "La Ligua": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Limache": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Llay-Llay": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 7078
+  },
+  "Los Andes": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Nogales": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 5445
+  },
+  "Olmu\u00e9": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Panquehue": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Papudo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Petorca": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11794
+  },
+  "Puchuncav\u00ed": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 7078
+  },
+  "Putaendo": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Quillota": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Quilpu\u00e9": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Quintero": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7078
+  },
+  "Rinconada": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "San Antonio": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "San Esteban": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "San Felipe": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Santa Mar\u00eda": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 4571
+  },
+  "Santo Domingo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Valpara\u00edso": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Villa Alemana": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Vi\u00f1a Del Mar": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Zapallar": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7078
+  },
+  "Ch\u00e9pica": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Chimbarongo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Codegua": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 7,
+    "price": 5157
+  },
+  "Co\u00ednco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Coltauco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Do\u00f1ihue": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Graneros": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "La Estrella": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11794
+  },
+  "Las Cabras": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7504
+  },
+  "Litueche": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11794
+  },
+  "Lolol": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10906
+  },
+  "Machal\u00ed": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 7,
+    "price": 5157
+  },
+  "Malloa": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Marchig\u00fce": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 1,
+    "price": 7428
+  },
+  "Mostazal": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Nancagua": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7008
+  },
+  "Navidad": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11794
+  },
+  "Olivar": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 7,
+    "price": 5157
+  },
+  "Palmilla": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Paredones": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Peralillo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10906
+  },
+  "Peumo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7504
+  },
+  "Pichidegua": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7504
+  },
+  "Pichilemu": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8166
+  },
+  "Placilla": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Pumanque": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Quinta De Tilcoco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7428
+  },
+  "Rancagua": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "Rengo": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Requ\u00ednoa": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5157
+  },
+  "San Fernando": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "San Vicente": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6764
+  },
+  "Santa Cruz": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5445
+  },
+  "Cauquenes": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Chanco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Colb\u00fan": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 7770
+  },
+  "Constituci\u00f3n": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Curepto": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7770
+  },
+  "Curic\u00f3": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Empedrado": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Huala\u00f1\u00e9": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7770
+  },
+  "Licant\u00e9n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7770
+  },
+  "Linares": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7229
+  },
+  "Longav\u00ed": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Maule": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Molina": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Parral": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5901
+  },
+  "Pelarco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Pelluhue": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Pencahue": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Rauco": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Retiro": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7770
+  },
+  "R\u00edo Claro": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Romeral": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Sagrada Familia": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "San Clemente": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "San Javier": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "San Rafael": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Talca": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Teno": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 5424
+  },
+  "Vichuqu\u00e9n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Villa Alegre": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Yerbas Buenas": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Bulnes": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 5901
+  },
+  "Chill\u00e1n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5901
+  },
+  "Chill\u00e1n Viejo": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5901
+  },
+  "Cobquecura": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Coelemu": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Coihueco": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "El Carmen": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 5901
+  },
+  "Ninhue": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "\u00d1iqu\u00e9n": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Pemuco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8389
+  },
+  "Pinto": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Portezuelo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Quill\u00f3n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 5901
+  },
+  "Quirihue": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 5901
+  },
+  "R\u00e1nquil": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "San Carlos": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 5901
+  },
+  "San Fabi\u00e1n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12729
+  },
+  "San Ignacio": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "San Nicol\u00e1s": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 8,
+    "price": 6043
+  },
+  "Treguaco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6136
+  },
+  "Yungay": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 8389
+  },
+  "Alto Biob\u00edo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12046
+  },
+  "Antuco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Arauco": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Cabrero": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 5901
+  },
+  "Ca\u00f1ete": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7595
+  },
+  "Chiguayante": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Concepci\u00f3n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6043
+  },
+  "Contulmo": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7673
+  },
+  "Coronel": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Curanilahue": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Florida": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8389
+  },
+  "Hualp\u00e9n": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Hualqui": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Laja": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7229
+  },
+  "Lebu": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Los \u00c1lamos": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Los \u00c1ngeles": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6043
+  },
+  "Lota": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Mulch\u00e9n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 6136
+  },
+  "Nacimiento": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7229
+  },
+  "Negrete": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Penco": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Quilaco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Quilleco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "San Pedro De La Paz": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "San Rosendo": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Santa B\u00e1rbara": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Santa Juana": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 8389
+  },
+  "Talcahuano": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6043
+  },
+  "Tir\u00faa": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7482
+  },
+  "Tom\u00e9": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6043
+  },
+  "Tucapel": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Yumbel": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 5901
+  },
+  "Angol": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 6779
+  },
+  "Carahue": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6136
+  },
+  "Cholchol": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6242
+  },
+  "Collipulli": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Cunco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 6136
+  },
+  "Curacaut\u00edn": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 9377
+  },
+  "Curarrehue": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12620
+  },
+  "Ercilla": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Freire": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6136
+  },
+  "Galvarino": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 6779
+  },
+  "Gorbea": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7573
+  },
+  "Lautaro": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Loncoche": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7573
+  },
+  "Lonquimay": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12620
+  },
+  "Los Sauces": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12620
+  },
+  "Lumaco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12620
+  },
+  "Melipeuco": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7573
+  },
+  "Nueva Imperial": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 6242
+  },
+  "Padre Las Casas": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6779
+  },
+  "Perquenco": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 7,
+    "price": 6779
+  },
+  "Pitrufqu\u00e9n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 6779
+  },
+  "Puc\u00f3n": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Pur\u00e9n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 10100
+  },
+  "Renaico": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7229
+  },
+  "Saavedra": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7573
+  },
+  "Temuco": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6136
+  },
+  "Teodoro Schmidt": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Tolt\u00e9n": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Traigu\u00e9n": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Victoria": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Vilc\u00fan": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Villarrica": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Corral": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12620
+  },
+  "Futrono": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 9377
+  },
+  "La Uni\u00f3n": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Lago Ranco": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 8114
+  },
+  "Lanco": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 7573
+  },
+  "Los Lagos": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "M\u00e1fil": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Mariquina": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Paillaco": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Panguipulli": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 7595
+  },
+  "R\u00edo Bueno": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Valdivia": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 6623
+  },
+  "Ancud": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 11137
+  },
+  "Calbuco": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 7952
+  },
+  "Castro": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 10080
+  },
+  "Chait\u00e9n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Chonchi": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 10347
+  },
+  "Cocham\u00f3": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Curaco De V\u00e9lez": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Dalcahue": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 10347
+  },
+  "Fresia": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7952
+  },
+  "Frutillar": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Futaleuf\u00fa": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Hualaihu\u00e9": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 9736
+  },
+  "Llanquihue": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7952
+  },
+  "Los Muermos": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 7237
+  },
+  "Maull\u00edn": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 7952
+  },
+  "Osorno": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 1,
+    "price": 6623
+  },
+  "Palena": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Puerto Montt": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 6958
+  },
+  "Puerto Octay": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Puerto Varas": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 7237
+  },
+  "Puqueld\u00f3n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Purranque": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Puyehue": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "Queil\u00e9n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 13256
+  },
+  "Quell\u00f3n": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 10347
+  },
+  "Quemchi": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 10347
+  },
+  "Quinchao": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 10347
+  },
+  "R\u00edo Negro": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "San Juan De La Costa": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 7573
+  },
+  "San Pablo": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 6,
+    "price": 6884
+  },
+  "Ays\u00e9n": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 12353
+  },
+  "Chile Chico": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 16692
+  },
+  "Cisnes": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 19648
+  },
+  "Cochrane": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 16692
+  },
+  "Coyhaique": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 10,
+    "price": 10006
+  },
+  "Guaitecas": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Lago Verde": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "O'Higgins": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "R\u00edo Ib\u00e1\u00f1ez": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 15084
+  },
+  "Tortel": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23022
+  },
+  "Ant\u00e1rtica": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Cabo De Hornos": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Laguna Blanca": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Natales": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 15,
+    "price": 11754
+  },
+  "Porvenir": {
+    "carrier": "CHX",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 3,
+    "price": 19626
+  },
+  "Primavera": {
+    "carrier": "CCH",
+    "code": "DEX (terrestre)",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Punta Arenas": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 12,
+    "price": 12185
+  },
+  "R\u00edo Verde": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "San Gregorio": {
+    "carrier": "URB",
+    "code": "normal",
+    "transit_days": 10,
+    "price": 12729
+  },
+  "Timaukel": {
+    "carrier": "SKN",
+    "code": "Normal",
+    "transit_days": 19,
+    "price": 107526
+  },
+  "Torres Del Paine": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 4,
+    "price": 23206
+  },
+  "Alhu\u00e9": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 3500
+  },
+  "Buin": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Calera De Tango": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Cerrillos": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Cerro Navia": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Colina": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Conchal\u00ed": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Curacav\u00ed": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "El Bosque": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "El Monte": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Estaci\u00f3n Central": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Huechuraba": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Independencia": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Isla De Maipo": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "La Cisterna": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "La Florida": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "La Granja": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "La Pintana": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "La Reina": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Lampa": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Las Condes": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Lo Barnechea": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Lo Espejo": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Lo Prado": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Macul": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Maip\u00fa": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Mar\u00eda Pinto": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Melipilla": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "\u00d1u\u00f1oa": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Padre Hurtado": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Paine": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Pedro Aguirre Cerda": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Pe\u00f1aflor": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Pe\u00f1alol\u00e9n": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Pirque": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Providencia": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Pudahuel": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Puente Alto": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Quilicura": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Quinta Normal": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Recoleta": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Renca": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "San Bernardo": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "San Joaqu\u00edn": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "San Jos\u00e9 De Maipo": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "San Miguel": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "San Pedro": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 3,
+    "price": 3500
+  },
+  "San Ram\u00f3n": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Santiago": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Talagante": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Til Til": {
+    "carrier": "BLX",
+    "code": "Normal",
+    "transit_days": 2,
+    "price": 3500
+  },
+  "Vitacura": {
+    "carrier": "TPC",
+    "code": "D\u00eda h\u00e1bil siguiente",
+    "transit_days": 2,
+    "price": 3500
+  }
+}
