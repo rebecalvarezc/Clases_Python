@@ -14,14 +14,30 @@ Tu opción: --> '''  # formato menú
 # y si el usuario mete un valor incorrecto? --> While
 
 def menu():
-    user_input = input(USER_OPTIONS)
-    # Dependiendo de lo que se escoja hay que redirigirlo a donde va
+    condicion = True
 
-    if user_input == 'a':
-        name = input("Escribe el nombre del libro: ")
-        author = input("Escribe el autor del libro: ")
-        database.add_book(name, author)
-        print(database.books)
+    while condicion:
+        user_input = input(USER_OPTIONS)
+        # Dependiendo de lo que se escoja hay que redirigirlo a donde va
+
+        if user_input == 'a':
+            name = input("Escribe el nombre del libro: ")
+            author = input("Escribe el autor del libro: ")
+            database.add_book(name, author)
+
+        elif user_input == 'l':
+            print(database.books)
+
+        elif user_input == 'r':
+            name = input('Escribe el nombre del libro que has leído: ')
+            database.book_status(name)
+
+        elif user_input == 'd':
+            name = input('Ingresa el nombre del libro que deseas eliminar: ')
+            database.delete_book(name)
+
+        elif user_input == 'q':
+            condicion = False
 
 
 if __name__ == '__main__':
