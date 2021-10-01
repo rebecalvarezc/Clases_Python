@@ -1,4 +1,5 @@
 from utils_files import database
+import pprint
 
 USER_OPTIONS = '''
 - Introduce "a" para agregar un nuevo libro.
@@ -13,20 +14,29 @@ Tu opción: --> '''  # formato menú
 def menu():
     while (user_input := input(USER_OPTIONS)) != "q":
         if user_input == 'a':
-            name = input("Escribe el nombre del libro: ").lower()
-            author = input("Escribe el autor del libro: ").lower()
+            database.create_database()
+            name = input("Escribe el nombre del libro: ").title()
+            author = input("Escribe el autor del libro: ").title()
             database.add_book(name, author)
 
         elif user_input == 'l':
-            print(database.books)
+            pprint.pprint(database.all_books())
 
         elif user_input == 'r':
-            name = input('Escribe el nombre del libro que has leído: ').lower()
+            name = input('Escribe el nombre del libro que has leído: ').title()
             database.book_status(name)
 
         elif user_input == 'd':
-            name = input('Ingresa el nombre del libro que deseas eliminar: ')
-            database.delete_book(name)
+            pprint.pprint(database.all_books())
+            while True:
+                try:
+                    book_id = int(input('Ingresa el ID del libro que deseas eliminar: '))
+                    database.delete_book(book_id)
+                    break
+                except ValueError:
+                    print('Escribe el ID del libro.')
+                    continue
+            print('Operación realizada satisfactoriamente :)')
         else:
             print("Por favor, ingresa un comando válido!")
 

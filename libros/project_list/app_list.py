@@ -1,4 +1,5 @@
 from utils_list import database
+import pprint
 
 USER_OPTIONS = '''
 - Introduce "a" para agregar un nuevo libro.
@@ -15,14 +16,22 @@ def menu():
         if user_input == 'a':
             name = input("Escribe el nombre del libro: ")
             author = input("Escribe el autor del libro: ")
-            database.add_book(name, author)
+            status = database.add_book(name, author)
+            if status:
+                print('El libro se ha agregado satisfactoriamente!')
+            else:
+                print('El libro ya se encuentra en la base de datos.')
 
         elif user_input == 'l':
-            print(database.books)
+            pprint.pprint(database.books)
 
         elif user_input == 'r':
             name = input('Escribe el nombre del libro que has leído: ')
-            database.book_status(name)
+            state = database.book_status(name)
+            if not state:
+                print('\nEl libro no se encuentra en la base de datos.')
+            else:
+                print('\nSe ha cambiado el estado de su libro exitosamente!')
 
         elif user_input == 'd':
             name = input('Ingresa el nombre del libro que deseas eliminar: ')

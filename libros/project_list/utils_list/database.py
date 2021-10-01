@@ -5,8 +5,12 @@
 books = []
 
 
-def add_book(name: str, author: str):
-    books.append({'name': name, 'author': author, 'status': False})  # Este false se cambia con 'r'
+def add_book(name: str, author: str) -> bool:
+    book = {'name': name, 'author': author, 'status': False}
+    if book not in books:
+        books.append(book)  # Este false se cambia con 'r'
+        return True
+    return False
 
 
 def delete_book(name: str):
@@ -16,10 +20,11 @@ def delete_book(name: str):
     # python asume que es una variable local, por lo que necesitamos ese 'global'
 
 
-def book_status(name: str):
-    # global books
-    # books = [book['status'] = True for book in books if book.get('name') == name]  # Preguntar a Rodney
+def book_status(name: str) -> bool:
+    # Practica: buscar llevar esta función a dos lineas de código o una.
+
     for book in books:
         if book.get('name') == name:
             book['status'] = True
-    # como hacer para que si no encuentra el libro me avise?
+            return True  # El return funciona como un break
+    return False
