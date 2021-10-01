@@ -34,7 +34,7 @@ def menu():
             database.delete_book(name)
 
         else:
-            print("Por favor, ingresa un comendo válido!")
+            print("Por favor, ingresa un comando válido!")
 
 
 if __name__ == '__main__':
