@@ -3,6 +3,11 @@ import os
 
 books_path = 'books.csv'
 
+STATUS = {
+    False: 'No leído',
+    True: 'Leído',
+}
+
 
 def create_database():
     if not os.path.exists('books.csv'):
@@ -21,7 +26,7 @@ def add_book(name: str, author: str):
     book_id = len(all_books()) + 1
     with open(books_path, 'a', newline='', encoding='utf-8') as database:
         books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
-        books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': False}])
+        books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': STATUS[False]}])
 
 
 def delete_book(book_id: int):
@@ -31,6 +36,7 @@ def delete_book(book_id: int):
         books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
         books_database.writeheader()
         books_database.writerows(books)
+
 
 # pendiente
 def book_status(name: str):

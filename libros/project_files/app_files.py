@@ -1,6 +1,7 @@
 from utils_files import database
 import pprint
-
+import os
+os.system('cls')
 USER_OPTIONS = '''
 - Introduce "a" para agregar un nuevo libro.
 - Introduce "l" para mostrar todos los libros.
@@ -13,6 +14,7 @@ Tu opción: --> '''  # formato menú
 
 def menu():
     while (user_input := input(USER_OPTIONS)) != "q":
+        os.system('cls')
         if user_input == 'a':
             database.create_database()
             name = input("Escribe el nombre del libro: ").title()
