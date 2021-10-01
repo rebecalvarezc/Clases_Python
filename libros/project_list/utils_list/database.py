@@ -11,8 +11,8 @@ def add_book(name: str, author: str):
 
 def delete_book(name: str):
     global books
-    books = [book for book in books if
-             book.get('name') != name]  # variable creada dentro de la función que itera sobre ella misma
+    books = [book for book in books if book.get('name') != name]
+    # variable creada dentro de la función que itera sobre ella misma
     # python asume que es una variable local, por lo que necesitamos ese 'global'
 
 
