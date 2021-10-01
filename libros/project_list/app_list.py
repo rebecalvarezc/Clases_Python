@@ -1,4 +1,4 @@
-from utils import database
+from utils_list import database
 
 USER_OPTIONS = '''
 - Introduce "a" para agregar un nuevo libro.
@@ -10,13 +10,8 @@ USER_OPTIONS = '''
 Tu opción: --> '''  # formato menú
 
 
-# ciclo hasta que presione q
-# y si el usuario mete un valor incorrecto? --> While
-
 def menu():
     while (user_input := input(USER_OPTIONS)) != "q":
-        # Dependiendo de lo que se escoja hay que redirigirlo a donde va
-
         if user_input == 'a':
             name = input("Escribe el nombre del libro: ")
             author = input("Escribe el autor del libro: ")
@@ -36,8 +31,8 @@ def menu():
         else:
             print("Por favor, ingresa un comando válido!")
 
+    print('Hasta pronto :)')
+
 
 if __name__ == '__main__':
     menu()
-
-# tarea: hacer el resto de funciones, que sea amigable.
