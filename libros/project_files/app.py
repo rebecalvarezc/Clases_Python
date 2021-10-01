@@ -1,4 +1,4 @@
-from utils import database
+from utils_files import database
 
 USER_OPTIONS = '''
 - Introduce "a" para agregar un nuevo libro.
@@ -10,9 +10,6 @@ USER_OPTIONS = '''
 Tu opción: --> '''  # formato menú
 
 
-# ciclo hasta que presione q
-# y si el usuario mete un valor incorrecto? --> While
-
 def menu():
     condicion = True
 
@@ -21,15 +18,15 @@ def menu():
         # Dependiendo de lo que se escoja hay que redirigirlo a donde va
 
         if user_input == 'a':
-            name = input("Escribe el nombre del libro: ")
-            author = input("Escribe el autor del libro: ")
+            name = input("Escribe el nombre del libro: ").lower()
+            author = input("Escribe el autor del libro: ").lower()
             database.add_book(name, author)
 
         elif user_input == 'l':
             print(database.books)
 
         elif user_input == 'r':
-            name = input('Escribe el nombre del libro que has leído: ')
+            name = input('Escribe el nombre del libro que has leído: ').lower()
             database.book_status(name)
 
         elif user_input == 'd':
@@ -37,10 +34,12 @@ def menu():
             database.delete_book(name)
 
         elif user_input == 'q':
+            print('Hasta pronto :)')
             condicion = False
+
+        else:
+            print('Ha introducido una opción incorrecta. Vuelva a intentarlo :)\n')
 
 
 if __name__ == '__main__':
     menu()
-
-# tarea: hacer el resto de funciones, que sea amigable.

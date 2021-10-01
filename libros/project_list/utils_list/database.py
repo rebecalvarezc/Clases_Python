@@ -17,9 +17,9 @@ def delete_book(name: str):
 
 
 def book_status(name: str):
+    # global books
+    # books = [book['status'] = True for book in books if book.get('name') == name]  # Preguntar a Rodney
     for book in books:
         if book.get('name') == name:
             book['status'] = True
-        else:
-            print(f'\nEl libro {name} no se encuentra en la base de datos.')
-            break
+    # como hacer para que si no encuentra el libro me avise?
