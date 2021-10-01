@@ -14,10 +14,7 @@ Tu opción: --> '''  # formato menú
 # y si el usuario mete un valor incorrecto? --> While
 
 def menu():
-    condicion = True
-
-    while condicion:
-        user_input = input(USER_OPTIONS)
+    while (user_input := input(USER_OPTIONS)) != "q":
         # Dependiendo de lo que se escoja hay que redirigirlo a donde va
 
         if user_input == 'a':
@@ -36,8 +33,8 @@ def menu():
             name = input('Ingresa el nombre del libro que deseas eliminar: ')
             database.delete_book(name)
 
-        elif user_input == 'q':
-            condicion = False
+        else:
+            print("Por favor, ingresa un comendo válido!")
 
 
 if __name__ == '__main__':
