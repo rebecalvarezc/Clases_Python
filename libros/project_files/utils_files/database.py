@@ -9,27 +9,27 @@ STATUS = {
 }
 
 
-def create_database():
+def create_database() -> None:
     if not os.path.exists('books.csv'):
         with open(books_path, 'w', newline='', encoding='utf-8') as database:
             books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
             books_database.writeheader()
 
 
-def all_books():
+def all_books() -> list:
     with open(books_path, 'r', encoding='utf-8') as database:
         book_list = list(csv.DictReader(database))
     return book_list
 
 
-def add_book(name: str, author: str):
+def add_book(name: str, author: str) -> None:   # deberia devolver un bool
     book_id = len(all_books()) + 1
     with open(books_path, 'a', newline='', encoding='utf-8') as database:
         books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
         books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': STATUS[False]}])
 
 
-def delete_book(book_id: int):
+def delete_book(book_id: int) -> None:
     books = all_books()
     books = [book for book in books if int(book.get('ID')) != book_id]
     with open(books_path, 'w', newline='', encoding='utf-8') as database:
