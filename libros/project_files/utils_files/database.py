@@ -27,7 +27,7 @@ def add_book(name: str, author: str) -> bool:
     check = [{'ID': str(i), 'name': name, 'author': author, 'status': STATUS[_]} in books_list for _ in (True, False)
              for i in range(1, len(books_list) + 1)]
     if not any(check):  # un diccionario solo es falso si no tiene información.
-        book_id = len(all_books()) + 1
+        book_id = len(books_list) + 1
         with open(books_path, 'a', newline='', encoding='utf-8') as database:
             books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
             books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': STATUS[False]}])
