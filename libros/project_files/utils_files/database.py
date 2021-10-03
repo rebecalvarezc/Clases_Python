@@ -1,5 +1,6 @@
 import csv
 import os
+from typing import Union
 
 books_path = 'books.csv'
 
@@ -7,6 +8,15 @@ STATUS = {
     False: 'No leído',
     True: 'Leído',
 }
+
+
+def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
+    return {
+        'ID': book_id,
+        'name': name,
+        'author': author,
+        'status': STATUS[status]
+    }
 
 
 def create_database() -> None:
@@ -24,13 +34,13 @@ def all_books() -> list:
 
 def add_book(name: str, author: str) -> bool:
     books_list = all_books()
-    check = [{'ID': str(i), 'name': name, 'author': author, 'status': STATUS[_]} in books_list for _ in (True, False)
-             for i in range(1, len(books_list) + 1)]
-    if not any(check):  # un diccionario solo es falso si no tiene información.
+    check = [data_structure(str(index + 1), name, author, status) in books_list for status in (True, False)
+             for index, _ in enumerate(books_list)]
+    if not any(check):
         book_id = len(books_list) + 1
         with open(books_path, 'a', newline='', encoding='utf-8') as database:
             books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
-            books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': STATUS[False]}])
+            books_database.writerows([data_structure(book_id, name, author, False)])
         return True
     return False
 
