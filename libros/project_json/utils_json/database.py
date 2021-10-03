@@ -10,9 +10,11 @@ database_name = 'rebeca_library.json'
 def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
     return {
         book_id:
-            {'name': name,
-             'author': author,
-             'status': STATUS[status]}
+            {
+                'name': name,
+                'author': author,
+                'status': STATUS[status]
+            }
     }
 
 
