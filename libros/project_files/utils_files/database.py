@@ -34,8 +34,8 @@ def all_books() -> list:
 
 def add_book(name: str, author: str) -> bool:
     books_list = all_books()
-    check = [data_structure(str(index + 1), name, author, status) in books_list for status in (True, False)
-             for index, _ in enumerate(books_list)]
+    check = [data_structure(str(index), name, author, status) in books_list for status in (True, False)
+             for index, _ in enumerate(books_list, start=1)]
     if not any(check):
         book_id = len(books_list) + 1
         with open(books_path, 'a', newline='', encoding='utf-8') as database:
