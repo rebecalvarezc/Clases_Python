@@ -37,7 +37,7 @@ def add_book(name: str, author: str):
     books = open_library()
     book_id = len(books) + 1
     book_exists = [data_structure(str(index), name, author, status) in books for status in (True, False)
-                   for index, in enumerate(books, start=1)]
+                   for index, _ in enumerate(books, start=1)]
     if not any(book_exists):
         books.append({book_id: {'name': name, 'author': author, 'status': STATUS[False]}})
         save_all_books(books)
