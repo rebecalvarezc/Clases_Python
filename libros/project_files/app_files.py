@@ -27,12 +27,13 @@ def menu():
             pprint.pprint(database.all_books())
 
         elif user_input == 'r':
-            name = input('Escribe el nombre del libro que has leído: ').title()
-            status = database.book_status(name)
+            pprint.pprint(database.all_books())
+            book_id = input('Escribe el ID del libro que has leído: ').title()
+            status = database.book_status(book_id)
             if not status:
                 print('El libro indicado no se encuentra en la base de datos.')
             else:
-                print(f'El libro {name} se ha marcado como leído :)')
+                print(f'El libro se ha marcado como leído :)')
 
         elif user_input == 'd':
             pprint.pprint(database.all_books())

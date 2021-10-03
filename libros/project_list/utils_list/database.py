@@ -22,7 +22,6 @@ def delete_book(name: str):
 
 def book_status(name: str) -> bool:
     # Practica: buscar llevar esta función a dos lineas de código o una.
-
     for book in books:
         if book.get('name') == name:
             book['status'] = True
