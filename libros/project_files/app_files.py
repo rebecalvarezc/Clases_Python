@@ -17,14 +17,20 @@ def menu():
             database.create_database()
             name = input("Escribe el nombre del libro: ").title()
             author = input("Escribe el autor del libro: ").title()
-            database.add_book(name, author)
+            status = database.add_book(name, author)
+            if not status:
+                print('El libro que desea agregar ya existe en la base de datos!')
 
         elif user_input == 'l':
             pprint.pprint(database.all_books())
 
         elif user_input == 'r':
             name = input('Escribe el nombre del libro que has leído: ').title()
-            database.book_status(name)
+            status = database.book_status(name)
+            if not status:
+                print('El libro indicado no se encuentra en la base de datos.')
+            else:
+                print(f'El libro {name} se ha marcado como leído :)')
 
         elif user_input == 'd':
             pprint.pprint(database.all_books())

@@ -18,10 +18,15 @@ def all_books():
 
 
 def add_book(name: str, author: str):
-    book_id = len(all_books()) + 1
-    with open(books_path, 'a', newline='', encoding='utf-8') as database:
-        books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
-        books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': False}])
+    books_list = all_books()
+    book = {'name': name, 'author': author, 'status': False}  # Si marco el libro como leído y lo vuelvo a agregar, se agrega. Error
+    if book not in books_list:
+        book_id = len(all_books()) + 1
+        with open(books_path, 'a', newline='', encoding='utf-8') as database:
+            books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
+            books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': False}])
+        return True
+    return False
 
 
 def delete_book(book_id: int):
@@ -32,14 +37,15 @@ def delete_book(book_id: int):
         books_database.writeheader()
         books_database.writerows(books)
 
-# pendiente
+
 def book_status(name: str):
-    for book in books:
+    books_list = all_books()
+    for book in books_list:
         if book.get('name') == name:
             book['status'] = True
             with open(books_path, 'w', newline='', encoding='utf-8') as database:
                 books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
                 books_database.writeheader()
-                books_database.writerows(books)
-
-# condiciones de borde
+                books_database.writerows(books_list)
+            return True
+    return False
