@@ -8,6 +8,7 @@ STATUS = {
     True: 'Leído',
 }
 
+
 def create_database() -> None:
     if not os.path.exists('books.csv'):
         with open(books_path, 'w', newline='', encoding='utf-8') as database:
@@ -23,15 +24,16 @@ def all_books() -> list:
 
 def add_book(name: str, author: str) -> bool:
     books_list = all_books()
-    book = {'name': name, 'author': author,
-            'status': False}  # Si marco el libro como leído y lo vuelvo a agregar, se agrega. Error
-    if book not in books_list:
+    book_false = {'name': name, 'author': author, 'status': STATUS[False]}
+    book_true = {'name': name, 'author': author, 'status': STATUS[True]}
+    if book_false or book_true in books_list:
         book_id = len(all_books()) + 1
         with open(books_path, 'a', newline='', encoding='utf-8') as database:
             books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
             books_database.writerows([{'ID': book_id, 'name': name, 'author': author, 'status': STATUS[False]}])
         return True
     return False
+
 
 def delete_book(book_id: int) -> None:
     books = all_books()
@@ -40,6 +42,7 @@ def delete_book(book_id: int) -> None:
         books_database = csv.DictWriter(database, ['ID', 'name', 'author', 'status'])
         books_database.writeheader()
         books_database.writerows(books)
+
 
 # pendiente
 def book_status(name: str) -> bool:
