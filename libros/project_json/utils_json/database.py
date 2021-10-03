@@ -1,9 +1,19 @@
 import json
 import os
+from typing import Union
 
 STATUS = {True: 'Leído', False: 'No leído'}
 
 database_name = 'rebeca_library.json'
+
+
+def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
+    return {
+        book_id:
+            {'name': name,
+             'author': author,
+             'status': STATUS[status]}
+    }
 
 
 def create_database() -> None:
@@ -26,8 +36,8 @@ def open_library():
 def add_book(name: str, author: str):
     books = open_library()
     book_id = len(books) + 1
-    book_exists = [{str(i): {'name': name, 'author': author, 'status': STATUS[_]}} in books for _ in (True, False)
-                   for i in range(1, book_id)]
+    book_exists = [data_structure(str(index), name, author, status) in books for status in (True, False)
+                   for index, in enumerate(books, start=1)]
     if not any(book_exists):
         books.append({book_id: {'name': name, 'author': author, 'status': STATUS[False]}})
         save_all_books(books)
