@@ -10,9 +10,11 @@ database_name = 'rebeca_library.json'
 def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
     return {
         book_id:
-            {'name': name,
-             'author': author,
-             'status': STATUS[status]}
+            {
+                'name': name,
+                'author': author,
+                'status': STATUS[status]
+            }
     }
 
 
@@ -27,13 +29,13 @@ def save_all_books(books: list[dict]) -> None:
         json.dump(books, file)
 
 
-def open_library():
+def open_library() -> list[dict]:
     with open(database_name, 'r', encoding='utf-8') as all_books:
         books = json.load(all_books)
     return books
 
 
-def add_book(name: str, author: str):
+def add_book(name: str, author: str) -> bool:
     books = open_library()
     book_id = len(books) + 1
     book_exists = [data_structure(str(index), name, author, status) in books for status in (True, False)

@@ -13,10 +13,10 @@ Tu opción: --> '''  # formato menú
 
 
 def menu():
+    database.create_database()
     while (user_input := input(USER_OPTIONS)) != "q":
         os.system('cls')
         if user_input == 'a':
-            database.create_database()
             name = input("Escribe el nombre del libro: ").title()
             author = input("Escribe el autor del libro: ").title()
             status = database.add_book(name, author)
