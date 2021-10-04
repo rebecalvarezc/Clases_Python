@@ -5,10 +5,14 @@
 books = []
 
 
+def book_structure(name: str, author: str, status: bool):
+    return {'name': name, 'author': author, 'status': status}
+
+
 def add_book(name: str, author: str) -> bool:
-    book = {'name': name, 'author': author, 'status': False}
+    book = book_structure(name, author, False)
     if book not in books:
-        books.append(book)  # Este false se cambia con 'r'
+        books.append(book)
         return True
     return False
 
@@ -20,10 +24,8 @@ def delete_book(name: str):
     # python asume que es una variable local, por lo que necesitamos ese 'global'
 
 
-def book_status(name: str) -> bool:
-    # Practica: buscar llevar esta función a dos lineas de código o una.
-    for book in books:
-        if book.get('name') == name:
-            book['status'] = True
-            return True  # El return funciona como un break
-    return False
+def book_status(name: str, author: str) -> None:
+    global books
+    books = [
+        book_structure(name, author, True) if book.get('name') == name and book.get('author') == author else book
+        for book in books]

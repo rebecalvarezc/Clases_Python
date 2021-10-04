@@ -8,7 +8,7 @@ USER_OPTIONS = '''
 - Introduce "d" para eliminar un libro de la base de datos.
 - Introduce "q" para salir.
 
-Tu opción: --> '''  # formato menú
+Tu opción: --> '''
 
 
 def menu():
@@ -27,15 +27,14 @@ def menu():
 
         elif user_input == 'r':
             name = input('Escribe el nombre del libro que has leído: ')
-            state = database.book_status(name)
-            if not state:
-                print('\nEl libro no se encuentra en la base de datos.')
-            else:
-                print('\nSe ha cambiado el estado de su libro exitosamente!')
+            author = input('Escribe el nombre del autor del libro: ')
+            database.book_status(name, author)
+            print('\nSe ha cambiado el estado de su libro exitosamente!')
 
         elif user_input == 'd':
             name = input('Ingresa el nombre del libro que deseas eliminar: ')
             database.delete_book(name)
+            print('Se ha eliminado el libro correctamente!')
 
         else:
             print("Por favor, ingresa un comando válido!")
