@@ -10,7 +10,7 @@ STATUS = {
 }
 
 
-def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
+def data_structure(book_id: Union[str, int], name: str, author: str, status: bool) -> dict:
     return {
         'ID': book_id,
         'name': name,

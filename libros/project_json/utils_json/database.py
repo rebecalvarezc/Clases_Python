@@ -7,7 +7,7 @@ STATUS = {True: 'Leído', False: 'No leído'}
 database_name = 'rebeca_library.json'
 
 
-def data_structure(book_id: Union[str, int], name: str, author: str, status: bool):
+def data_structure(book_id: Union[str, int], name: str, author: str, status: bool) -> dict:
     return {
         book_id:
             {

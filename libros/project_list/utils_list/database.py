@@ -5,7 +5,7 @@
 books = []
 
 
-def book_structure(name: str, author: str, status: bool):
+def book_structure(name: str, author: str, status: bool) -> dict:
     return {'name': name, 'author': author, 'status': status}
 
 
@@ -17,7 +17,7 @@ def add_book(name: str, author: str) -> bool:
     return False
 
 
-def delete_book(name: str):
+def delete_book(name: str) -> None:
     global books
     books = [book for book in books if book.get('name') != name]
     # variable creada dentro de la función que itera sobre ella misma
