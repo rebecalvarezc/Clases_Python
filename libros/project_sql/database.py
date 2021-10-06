@@ -22,8 +22,7 @@ def add_book(connection, title: str, author: str, status: bool = STATUS[False]):
         if (title, author) not in book_list:
             connection.execute(INSERT_BOOK, (title, author, status))
             return True
-        else:
-            return False
+        return False
 
 
 def show_books(connection) -> list[tuple]:
@@ -42,5 +41,4 @@ def remove_book(connection, book_id: int):
         if (book_id,) in existing_ids:
             connection.execute(DELETE_BOOK, (book_id,))
             return True
-        else:
-            return False
+        return False
