@@ -18,13 +18,13 @@ def menu():
     database.create_library(connection)
 
     while (user_input := input(USER_OPTIONS)) != "q":
-        user_input = input(USER_OPTIONS)
         os.system('cls')
         if user_input == 'a':
             title = input("Escribe el nombre del libro: ").title()
             author = input("Escribe el autor del libro: ").title()
-            database.add_book(connection, title, author)
-            print('\nSe ha agregado el libro satisfactoriamente!')
+            added = database.add_book(connection, title, author)
+            if not added:
+                print('\nSe ha agregado el libro satisfactoriamente!')
 
         elif user_input == 'l':
             pprint.pprint(database.show_books(connection))

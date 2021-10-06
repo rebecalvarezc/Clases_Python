@@ -18,7 +18,12 @@ def create_library(connection):
 
 def add_book(connection, title: str, author: str, status: bool = STATUS[False]):
     with connection:
-        connection.execute(INSERT_BOOK, (title, author, status))
+        book_list = connection.execute(EXISTING_BOOKS)
+        if (title, author) not in book_list:
+            connection.execute(INSERT_BOOK, (title, author, status))
+            return True
+        else:
+            return False
 
 
 def show_books(connection) -> list[tuple]:

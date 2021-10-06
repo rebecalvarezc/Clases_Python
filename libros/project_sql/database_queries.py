@@ -9,3 +9,5 @@ SHOW_ALL_BOOKS = "SELECT * FROM library;"
 DELETE_BOOK = "DELETE FROM library WHERE id = ?;"
 
 READ_BOOK = "UPDATE library SET status = ? WHERE id = ?;"
+
+EXISTING_BOOKS = "SELECT title, author FROM library;"
