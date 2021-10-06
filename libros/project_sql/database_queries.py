@@ -1,0 +1,9 @@
+CREATE_TABLE = """CREATE TABLE IF NOT EXISTS library
+(id INTEGER NOT NULL UNIQUE, title TEXT NOT NULL, author TEXT NOT NULL, status NUMERIC,
+PRIMARY KEY(id AUTOINCREMENT));"""
+
+INSERT_BOOK = "INSERT INTO library (name, author, status) VALUES (?, ? , ?);"
+
+SHOW_ALL_BOOKS = "SELECT * FROM library;"
+
+
