@@ -44,9 +44,3 @@ def remove_book(connection, book_id: int):
             return True
         else:
             return False
-
-
-def try_out(connection):
-    with connection:
-        existing_ids = connection.execute(EXISTING_IDS).fetchall()
-        print(existing_ids)
