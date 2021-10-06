@@ -28,9 +28,9 @@ def show_books(connection) -> list[tuple]:
 
 def change_book_status(connection, book_id: int):
     with connection:
-        pass
+        connection.execute(READ_BOOK, (STATUS[True], book_id))
 
 
 def remove_book(connection, book_id: int):
     with connection:
-        pass
+        connection.execute(DELETE_BOOK, (book_id,))

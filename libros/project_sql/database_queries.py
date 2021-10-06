@@ -6,4 +6,6 @@ INSERT_BOOK = "INSERT INTO library (title, author, status) VALUES (?, ? , ?);"
 
 SHOW_ALL_BOOKS = "SELECT * FROM library;"
 
+DELETE_BOOK = "DELETE FROM library WHERE id = ?;"
 
+READ_BOOK = "UPDATE library SET status = ? WHERE id = ?;"
