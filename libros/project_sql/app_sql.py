@@ -39,7 +39,8 @@ def menu():
             book_id = int(input('Ingresa el ID del libro que deseas eliminar: '))
             database.remove_book(connection, book_id)
             print('\nOperación realizada satisfactoriamente :)')
-
+        else:
+            print("Por favor, ingresa un comando válido!")
     print('\nHasta pronto :)')
 
 
