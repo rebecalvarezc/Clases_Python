@@ -1,4 +1,5 @@
 import sqlite3
+
 from libros.project_sql.database_queries import *
 
 STATUS = {True: 'Leído', False: 'No leído'}
@@ -15,11 +16,21 @@ def create_library(connection):
         connection.execute(CREATE_TABLE)
 
 
-def add_book(connection, name: str, author: str, status: bool = STATUS[False]):
+def add_book(connection, title: str, author: str, status: bool = STATUS[False]):
     with connection:
-        connection.execute(INSERT_BOOK, (name, author, status))
+        connection.execute(INSERT_BOOK, (title, author, status))
 
 
-def show_books(connection):
+def show_books(connection) -> list[tuple]:
     with connection:
         return connection.execute(SHOW_ALL_BOOKS).fetchall()
+
+
+def change_book_status(connection, book_id: int):
+    with connection:
+        pass
+
+
+def remove_book(connection, book_id: int):
+    with connection:
+        pass
