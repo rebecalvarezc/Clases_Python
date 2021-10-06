@@ -23,9 +23,10 @@ def menu():
             title = input("Escribe el nombre del libro: ").title()
             author = input("Escribe el autor del libro: ").title()
             added = database.add_book(connection, title, author)
-            if not added:
+            if added:
                 print('\nSe ha agregado el libro satisfactoriamente!')
-
+            else:
+                print('\nEl libro ya existe en la base de datos!')
         elif user_input == 'l':
             pprint.pprint(database.show_books(connection))
 
@@ -37,8 +38,11 @@ def menu():
         elif user_input == 'd':
             pprint.pprint(database.show_books(connection))
             book_id = int(input('Ingresa el ID del libro que deseas eliminar: '))
-            database.remove_book(connection, book_id)
-            print('\nOperación realizada satisfactoriamente :)')
+            deleted = database.remove_book(connection, book_id)
+            if deleted:
+                print('\nOperación realizada satisfactoriamente :)')
+            else:
+                print(f'\nNo se ha encontrado un libro con id {book_id}!')
         else:
             print("Por favor, ingresa un comando válido!")
     print('\nHasta pronto :)')

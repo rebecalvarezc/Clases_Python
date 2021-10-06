@@ -11,3 +11,5 @@ DELETE_BOOK = "DELETE FROM library WHERE id = ?;"
 READ_BOOK = "UPDATE library SET status = ? WHERE id = ?;"
 
 EXISTING_BOOKS = "SELECT title, author FROM library;"
+
+EXISTING_IDS = "SELECT id FROM library;"

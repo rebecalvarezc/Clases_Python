@@ -18,7 +18,7 @@ def create_library(connection):
 
 def add_book(connection, title: str, author: str, status: bool = STATUS[False]):
     with connection:
-        book_list = connection.execute(EXISTING_BOOKS)
+        book_list = connection.execute(EXISTING_BOOKS).fetchall()
         if (title, author) not in book_list:
             connection.execute(INSERT_BOOK, (title, author, status))
             return True
@@ -38,4 +38,15 @@ def change_book_status(connection, book_id: int):
 
 def remove_book(connection, book_id: int):
     with connection:
-        connection.execute(DELETE_BOOK, (book_id,))
+        existing_ids = connection.execute(EXISTING_IDS).fetchall()
+        if (book_id,) in existing_ids:
+            connection.execute(DELETE_BOOK, (book_id,))
+            return True
+        else:
+            return False
+
+
+def try_out(connection):
+    with connection:
+        existing_ids = connection.execute(EXISTING_IDS).fetchall()
+        print(existing_ids)
