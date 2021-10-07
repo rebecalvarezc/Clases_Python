@@ -18,8 +18,8 @@ def create_library(connection):
 
 def add_book(connection, title: str, author: str, status: bool = STATUS[False]):
     with connection:
-        book_list = connection.execute(EXISTING_BOOKS).fetchall()
-        if (title, author) not in book_list:
+        book_list = connection.execute(EXISTING_BOOKS, (title, author)).fetchall()
+        if book_list is None:
             connection.execute(INSERT_BOOK, (title, author, status))
             return True
         return False

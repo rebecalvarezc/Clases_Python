@@ -10,6 +10,6 @@ DELETE_BOOK = "DELETE FROM library WHERE id = ?;"
 
 READ_BOOK = "UPDATE library SET status = ? WHERE id = ?"
 
-EXISTING_BOOKS = "SELECT title, author FROM library;"
+EXISTING_BOOKS = "SELECT title, author FROM library WHERE title = ? AND author = ? LIMIT 1;"
 
 EXISTING_IDS = "SELECT id FROM library;"
