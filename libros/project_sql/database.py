@@ -9,16 +9,13 @@ connection = sqlite3.connect('rebeca_library.db')
 
 def create_library():
     """
-       Función usada para crear la tabla de datos si no existe previamente.
-       """
+    Función usada para crear la tabla de datos si no existe previamente.
+    """
     with connection:
         connection.execute(CREATE_TABLE)
 
 
-def add_book( title: str, author: str, status: bool = STATUS[False]) -> bool:
-    """
-    Función usada para agregar el libro a las filas de la tabla de datos, siempre que este no exista previamente."
-    """
+def add_book(title: str, author: str, status: bool = STATUS[False]) -> bool:
     """
     Función usada para agregar el libro a las filas de la tabla de datos, siempre que este no exista previamente."
     """
@@ -31,9 +28,6 @@ def add_book( title: str, author: str, status: bool = STATUS[False]) -> bool:
 
 
 def show_books() -> list[tuple]:
-    """
-    Función usada para mostrar todos los libros de la tabla de datos.
-    """
     """
     Función usada para mostrar todos los libros de la tabla de datos.
     """
@@ -58,5 +52,4 @@ def remove_book(book_id: int):
         if (book_id,) in existing_ids:
             connection.execute(DELETE_BOOK, (book_id,))
             return True
-        else:
-            return False
+        return False
