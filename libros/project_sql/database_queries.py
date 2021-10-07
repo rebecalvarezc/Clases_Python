@@ -12,7 +12,7 @@ SHOW_ALL_BOOKS = "SELECT * FROM library;"
 
 DELETE_BOOK = "DELETE FROM library WHERE id = ?;"
 
-READ_BOOK = "UPDATE library SET status = ? WHERE id = ?"
+READ_BOOK = "UPDATE library SET status = ? WHERE id = ? LIMIT 1"
 
 EXISTING_BOOKS = "SELECT title, author FROM library WHERE title = ? AND author = ? LIMIT 1;"
 

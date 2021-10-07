@@ -8,11 +8,19 @@ CREATE_MOVIE_TABLE = """ CREATE TABLE IF NOT EXISTS movies (
     PRIMARY KEY(movie_id AUTOINCREMENT)
 );"""
 
+CHECK_MOVIE = "SELECT title, release_timestamp FROM movies WHERE title = ? AND release_timestamp = ? LIMIT 1;"
+
 INSERT_MOVIE = "INSERT INTO movies (title, release_timestamp, watched) VALUES (?, ?, ?);"
 
 SHOW_MOVIES = "SELECT movie_id, title, release_timestamp FROM movies ;"
 
 UPCOMING_MOVIES = "SELECT movie_id, title, release_timestamp FROM movies WHERE release_timestamp > ?;"
+
+MOVIES_IDS = "SELECT title FROM movies WHERE movie_id = ? LIMIT 1;"
+
+CHANGE_WATCHED_MOVIE = "UPDATE movies SET watched = 1, release_timestamp = ? WHERE movie_id = ?;"
+
+WATCHED_MOVIES = "SELECT movie_id, title, release_timestamp FROM movies WHERE watched =1;"
 
 # USER QUERIES
 
