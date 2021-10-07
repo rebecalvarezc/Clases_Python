@@ -16,11 +16,11 @@ UPCOMING_MOVIES = "SELECT movie_id, title, release_timestamp FROM movies WHERE r
 
 # USER QUERIES
 
-CREATE_USER_TABLE = """ CREATE TABLE IF NOT EXISTS users (
-    watcher_name TEXT NOT NULL,
-    title REAL NOT NULL,
-    PRIMARY KEY (title)
-);"""
+# CREATE_USER_TABLE = """ CREATE TABLE IF NOT EXISTS users (
+#     watcher_name TEXT NOT NULL,
+#     title REAL NOT NULL,
+#     PRIMARY KEY (title)
+# );"""
 
 # JOIN_USER_MOVIE_TABLES = """SELECT users.*, movies.movie_id, movies.watched
 #     FROM movies JOIN users ON users.title = movies.title """ # Preguntar Rodney

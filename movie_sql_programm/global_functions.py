@@ -8,7 +8,7 @@ connection = sqlite3.connect('movie_database.db')
 
 def create_database():
     with connection:
-        connection.execute(CREATE_MOVIE_TABLE, CREATE_USER_TABLE) # Preguntar rodney
+        connection.execute(CREATE_MOVIE_TABLE)
 
 
 def add_movies(movie_name: str, release_date: float):
