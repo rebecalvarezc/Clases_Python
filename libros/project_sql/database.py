@@ -20,7 +20,7 @@ def add_book(title: str, author: str, status: bool = STATUS[False]) -> bool:
     Función usada para agregar el libro a las filas de la tabla de datos, siempre que este no exista previamente."
     """
     with connection:
-        book_list = connection.execute(EXISTING_BOOKS, (title, author)).fetchall()
+        book_list = connection.execute(EXISTING_BOOKS, (title, author)).fetchone()
         if book_list is None:
             connection.execute(INSERT_BOOK, (title, author, status))
             return True
