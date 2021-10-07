@@ -1,4 +1,4 @@
-from libros.project_sql import database
+import database
 import pprint
 import os
 
@@ -34,8 +34,11 @@ def menu():
         elif user_input == 'r':
             pprint.pprint(database.show_books())
             book_id = int(input('Escribe el ID del libro que has leído: '))
-            database.change_book_status(book_id)
-            print(f'\nEl estado del libro de id: {book_id} ha cambiado a "Leído".')
+            status = database.change_book_status(book_id)
+            if status:
+                print(f'\nEl estado del libro de id: {book_id} ha cambiado a "Leído".')
+            else:
+                print(f'\nError. El id: {book_id} no pertenece a ninguno de los libros mostrados.')
 
         elif user_input == 'd':
             pprint.pprint(database.show_books())

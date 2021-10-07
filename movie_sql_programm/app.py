@@ -1,5 +1,5 @@
 from datetime import datetime
-from global_functions import *
+import global_functions
 from pprint import pprint
 
 MAIN_MENU = """\nWelcome to the watchlist app!
@@ -39,6 +39,7 @@ def user_interface():
                     username = input('Username: ')
                     movie_id = int(input('Movie ID: '))
                     watched_movies(username, movie_id)
+
                 except ValueError:
                     print('Por favor introduzca un numero en "Movie ID".')
 
