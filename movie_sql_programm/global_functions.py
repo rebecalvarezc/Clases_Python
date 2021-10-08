@@ -36,15 +36,16 @@ def get_movies(upcoming: bool = False) -> list[tuple]:
     :param upcoming: True for upcoming movies, False for all movies
     :return: list[tuple]
     """
-    if not upcoming:
-        with connection:
-            return connection.execute(database_queries.SHOW_MOVIES).fetchall()
-    else:
-        with connection:
-            now = datetime.now().timestamp()
-            movies = connection.execute(database_queries.UPCOMING_MOVIES, (now,)).fetchall()
-            if movies is not None:
-                return movies
+    with connection:
+        movies = connection.cursor()
+        if not upcoming:
+            return movies.execute(database_queries.SHOW_MOVIES).fetchall()
+
+        now = datetime.now().timestamp()
+        upcoming_list = movies.execute(database_queries.UPCOMING_MOVIES, (now,)).fetchall()
+        if upcoming_list is not None:
+            return upcoming_list
+        return []
 
 
 def change_movie_status(movie_id: int) -> bool:
