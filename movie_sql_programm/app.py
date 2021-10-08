@@ -79,8 +79,12 @@ def user_interface():
             add_watched_movie()
 
         elif user_selection == 5:
-            print('\n-- Watched movies --')
-            print_movies(global_functions.watched_movies())
+            watched_movies = global_functions.watched_movies()
+            if not watched_movies:
+                print('There are no watched movies on your list.')
+            else:
+                print('\n-- Watched movies --')
+                print_movies(watched_movies)
 
         elif user_selection == 6:
             pass
