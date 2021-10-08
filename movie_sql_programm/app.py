@@ -1,6 +1,6 @@
 from datetime import datetime
 import global_functions
-
+from pprint import pprint
 
 MAIN_MENU = """\nWelcome to the watchlist app!
 Please select one of the following options:
@@ -26,17 +26,27 @@ def add_function():
         print('The movie is already saved in our database.')
 
 
+def print_movies(movies: list):
+    for movie in movies:
+        movie_id = movie[0]
+        title = movie[1]
+        release_date = datetime.fromtimestamp(movie[2])
+        pprint(f'{movie_id}: {title} (on {release_date.strftime("%b %d %Y")})')
+
+
 def show_upcoming_movies():
-    print('-- Upcoming movies --')
-    any_upcoming_movie = global_functions.upcoming_movies()
-    print('-----')
+    any_upcoming_movie = global_functions.get_movies(True)
     if not any_upcoming_movie:
         print('There aren\'t any upcoming movies.')
+    else:
+        print('-- Upcoming movies --')
+        print_movies(any_upcoming_movie)
+        print('-----')
 
 
 def add_watched_movie():
     while True:
-        global_functions.show_movies()
+        print_movies(global_functions.get_movies())
         try:
             movie_id = int(input('Movie ID: '))
             movie_watched = global_functions.change_movie_status(movie_id)
@@ -61,14 +71,16 @@ def user_interface():
 
         elif user_selection == 3:
             print('-- All movies --')
-            global_functions.show_movies()
+            movies = global_functions.get_movies()
+            print_movies(movies)
             print('------')
+
         elif user_selection == 4:
             add_watched_movie()
 
         elif user_selection == 5:
             print('\n-- Watched movies --')
-            global_functions.watched_movies()
+            print_movies(global_functions.watched_movies())
 
         elif user_selection == 6:
             pass

@@ -10,7 +10,7 @@ CREATE_MOVIE_TABLE = """ CREATE TABLE IF NOT EXISTS movies (
 
 CHECK_MOVIE = "SELECT title, release_timestamp FROM movies WHERE title = ? AND release_timestamp = ? LIMIT 1;"
 
-INSERT_MOVIE = "INSERT INTO movies (title, release_timestamp, watched) VALUES (?, ?, ?);"
+INSERT_MOVIE = "INSERT INTO movies (title, release_timestamp, watched) VALUES (?, ?, 0);"
 
 SHOW_MOVIES = "SELECT movie_id, title, release_timestamp FROM movies ;"
 
