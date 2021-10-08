@@ -12,7 +12,7 @@ def create_database():
     with connection:
         connection.execute(database_queries.CREATE_MOVIE_TABLE)
         connection.execute(database_queries.CREATE_USER_TABLE)
-        connection.execute(database_queries.CREATE_WATCHED_TABLE) # esto se puede resumir?
+        connection.execute(database_queries.CREATE_WATCHED_TABLE)  # esto se puede resumir?
 
 
 def add_movies(movie_name: str, release_date: float) -> bool:
@@ -62,16 +62,20 @@ def new_watched_movie(username: str, movie_id: int) -> bool:
         all_usernames = connection.execute(database_queries.USERS_IDS, (username,)).fetchone()
         if all_usernames is not None:
             if all_movies is not None:
-                connection.execute(database_queries.WATCHED_MOVIE, (all_usernames, all_movies))
+                pass
                 return True
             return False
 
 
-def watched_movies() -> list[tuple]:
-    """
-    This function gets all movies marked as watched in the database.
-
-    :return: list[tuple]
-    """
+def add_user(name: str, last_name: str, username: str):
     with connection:
-        return connection.execute(database_queries.WATCHED_MOVIES).fetchall()
+        connection.execute(database_queries.ADD_USER, (name, last_name, username))
+
+# def watched_movies() -> list[tuple]:
+#     """
+#     This function gets all movies marked as watched in the database.
+#
+#     :return: list[tuple]
+#     """
+#     with connection:
+#         return connection.execute(database_queries.WATCHED_MOVIES).fetchall()

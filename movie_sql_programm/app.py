@@ -80,7 +80,7 @@ def user_interface():
             add_watched_movie()
 
         elif user_selection == 5:
-            watched_movies = global_functions.watched_movies()
+            pass
             if not watched_movies:
                 print('There are no watched movies on your list.')
             else:
@@ -88,7 +88,11 @@ def user_interface():
                 print_movies(watched_movies)
 
         elif user_selection == 6:
-            pass
+            name = input('Introduce your name: ').title()
+            last_name = input('Introduce your last name: ').title()
+            user_name = input('Introduce your username: ').lower()
+            global_functions.add_user(name, last_name, user_name)
+            print('User added successfully!')
 
         else:
             print('Introduce a valid option.')

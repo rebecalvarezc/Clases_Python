@@ -10,7 +10,7 @@ CREATE_USER_TABLE = """ CREATE TABLE IF NOT EXISTS users (
     watcher_name TEXT NOT NULL,
     watcher_last_name TEXT NOT NULL,
     username TEXT NOT NULL,
-    PRIMARY KEY (user_id)
+    PRIMARY KEY (user_id AUTOINCREMENT)
 );"""
 
 CREATE_WATCHED_TABLE = """ CREATE TABLE IF NOT EXISTS watched_movies (
@@ -33,8 +33,9 @@ USERS_IDS = "SELECT user_id FROM users WHERE username = ? LIMIT 1;"
 
 MOVIES_IDS = "SELECT title FROM movies WHERE movie_id = ? LIMIT 1;"
 
-WATCHED_MOVIE = " INSERT INTO  watched_movies (user_id, movie_id) VALUES (?, ?)"
+WATCHED_MOVIE = ""
 
+ADD_USER = "INSERT INTO users(watcher_name, watcher_last_name, username) VALUES (?,?,?);"
 
 
 
