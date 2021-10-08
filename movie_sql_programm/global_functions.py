@@ -1,4 +1,4 @@
-import database_queries
+from database_queries import *
 import sqlite3
 from datetime import datetime
 
@@ -10,9 +10,9 @@ def create_database():
     This function creates the database if it does not exists.
     """
     with connection:
-        connection.execute(database_queries.CREATE_MOVIE_TABLE)
-        connection.execute(database_queries.CREATE_USER_TABLE)
-        connection.execute(database_queries.CREATE_WATCHED_TABLE)  # esto se puede resumir?
+        connection.execute(CREATE_MOVIE_TABLE)
+        connection.execute(CREATE_USER_TABLE)
+        connection.execute(CREATE_WATCHED_TABLE)  # esto se puede resumir?
 
 
 def add_movies(movie_name: str, release_date: float) -> bool:
@@ -24,9 +24,9 @@ def add_movies(movie_name: str, release_date: float) -> bool:
     :return: bool
     """
     with connection:
-        movie_exists = connection.execute(database_queries.CHECK_MOVIE, (movie_name, release_date)).fetchone()
+        movie_exists = connection.execute(CHECK_MOVIE, (movie_name, release_date)).fetchone()
         if movie_exists is None:
-            connection.execute(database_queries.INSERT_MOVIE, (movie_name, release_date))
+            connection.execute(INSERT_MOVIE, (movie_name, release_date))
             return True
         return False
 
@@ -41,10 +41,10 @@ def get_movies(upcoming: bool = False) -> list[tuple]:
     with connection:
         movies = connection.cursor()
         if not upcoming:
-            return movies.execute(database_queries.SHOW_MOVIES).fetchall()
+            return movies.execute(SHOW_MOVIES).fetchall()
 
         now = datetime.now().timestamp()
-        upcoming_list = movies.execute(database_queries.UPCOMING_MOVIES, (now,)).fetchall()
+        upcoming_list = movies.execute(UPCOMING_MOVIES, (now,)).fetchall()
         if upcoming_list is not None:
             return upcoming_list
         return []
@@ -55,21 +55,21 @@ def new_watched_movie(username: str, movie_id: int) -> bool:
     This function changes the timestamp of a movie that's been already watched by the user.
 
     :param movie_id: movie ID
+    :param username: user name
     :return: bool
     """
     with connection:
-        all_movies = connection.execute(database_queries.MOVIES_IDS, (movie_id,)).fetchone()
-        all_usernames = connection.execute(database_queries.USERS_IDS, (username,)).fetchone()
-        if all_usernames is not None:
-            if all_movies is not None:
-                pass
-                return True
-            return False
+        all_movies = connection.execute(MOVIES_IDS, (movie_id,)).fetchone()
+        all_usernames = connection.execute(USERS_IDS, (username,)).fetchone()
+        if all_usernames is not None and all_movies is not None:
+            connection.execute(ADD_WATCHED_MOVIE, (all_usernames[0], movie_id))
+            return True
+        return False
 
 
 def add_user(name: str, last_name: str, username: str):
     with connection:
-        connection.execute(database_queries.ADD_USER, (name, last_name, username))
+        connection.execute(ADD_USER, (name, last_name, username))
 
 # def watched_movies() -> list[tuple]:
 #     """
@@ -78,4 +78,4 @@ def add_user(name: str, last_name: str, username: str):
 #     :return: list[tuple]
 #     """
 #     with connection:
-#         return connection.execute(database_queries.WATCHED_MOVIES).fetchall()
+#         return connection.execute(WATCHED_MOVIES).fetchall()

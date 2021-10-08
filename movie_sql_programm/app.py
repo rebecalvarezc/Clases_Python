@@ -52,7 +52,7 @@ def add_watched_movie():
             movie_id = int(input('Movie ID: '))
             movie_watched = global_functions.new_watched_movie(user, movie_id)
             if movie_watched:
-                print('Movie status changed :)')
+                print('Movie added to the list :)')
             else:
                 print('Movie ID/Username not found.')
             break
@@ -86,7 +86,6 @@ def user_interface():
             else:
                 print('\n-- Watched movies --')
                 print_movies(watched_movies)
-
         elif user_selection == 6:
             name = input('Introduce your name: ').title()
             last_name = input('Introduce your last name: ').title()
