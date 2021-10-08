@@ -11,6 +11,8 @@ def create_database():
     """
     with connection:
         connection.execute(database_queries.CREATE_MOVIE_TABLE)
+        connection.execute(database_queries.CREATE_USER_TABLE)
+        connection.execute(database_queries.CREATE_WATCHED_TABLE) # esto se puede resumir?
 
 
 def add_movies(movie_name: str, release_date: float) -> bool:
@@ -48,7 +50,7 @@ def get_movies(upcoming: bool = False) -> list[tuple]:
         return []
 
 
-def change_movie_status(movie_id: int) -> bool:
+def new_watched_movie(username: str, movie_id: int) -> bool:
     """
     This function changes the timestamp of a movie that's been already watched by the user.
 
@@ -57,11 +59,12 @@ def change_movie_status(movie_id: int) -> bool:
     """
     with connection:
         all_movies = connection.execute(database_queries.MOVIES_IDS, (movie_id,)).fetchone()
-        if all_movies is not None:
-            watch_date = datetime.now().timestamp()
-            connection.execute(database_queries.CHANGE_WATCHED_MOVIE, (watch_date, movie_id,))
-            return True
-        return False
+        all_usernames = connection.execute(database_queries.USERS_IDS, (username,)).fetchone()
+        if all_usernames is not None:
+            if all_movies is not None:
+                connection.execute(database_queries.WATCHED_MOVIE, (all_usernames, all_movies))
+                return True
+            return False
 
 
 def watched_movies() -> list[tuple]:

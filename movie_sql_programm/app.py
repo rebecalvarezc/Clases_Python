@@ -48,12 +48,13 @@ def add_watched_movie():
     while True:
         print_movies(global_functions.get_movies())
         try:
+            user = input('Username: ')
             movie_id = int(input('Movie ID: '))
-            movie_watched = global_functions.change_movie_status(movie_id)
+            movie_watched = global_functions.new_watched_movie(user, movie_id)
             if movie_watched:
                 print('Movie status changed :)')
             else:
-                print('Movie ID not found.')
+                print('Movie ID/Username not found.')
             break
         except ValueError:
             print('Introduce a number in "Movie ID".')
