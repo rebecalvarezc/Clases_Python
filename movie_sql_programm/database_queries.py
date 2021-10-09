@@ -37,5 +37,9 @@ ADD_WATCHED_MOVIE = "INSERT INTO  watched_movies (user_id, movie_id) VALUES (?, 
 
 ADD_USER = "INSERT INTO users(name, last_name, username) VALUES (?,?,?);"
 
-
+VIEW_WATCHED_MOVIES = """SELECT *
+    FROM movies 
+    JOIN watched_movies
+    ON movies.movie_id = watched_movies.movie_id 
+    WHERE watched_movies.user_id = ?;"""
 

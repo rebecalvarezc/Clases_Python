@@ -80,7 +80,8 @@ def user_interface():
             add_watched_movie()
 
         elif user_selection == 5:
-            pass
+            username = input('Username: ')
+            watched_movies = global_functions.view_watched_movies(username)
             if not watched_movies:
                 print('There are no watched movies on your list.')
             else:

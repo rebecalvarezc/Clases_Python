@@ -67,15 +67,24 @@ def new_watched_movie(username: str, movie_id: int) -> bool:
         return False
 
 
-def add_user(name: str, last_name: str, username: str):
+def add_user(name: str, last_name: str, username: str) -> None:
+    """
+    This function adds a user into the database.
+    :param1 name: user name
+    :param2 last_name: user last name
+    :param3 username: user username
+    """
     with connection:
         connection.execute(ADD_USER, (name, last_name, username))
 
-# def watched_movies() -> list[tuple]:
-#     """
-#     This function gets all movies marked as watched in the database.
-#
-#     :return: list[tuple]
-#     """
-#     with connection:
-#         return connection.execute(WATCHED_MOVIES).fetchall()
+
+def view_watched_movies(username: str) -> list[tuple]:
+    """
+    This function gets all movies marked as watched in the database.
+
+    :param1 username: user username
+    :return: list[tuple]
+    """
+    with connection:
+        user_id = connection.execute(USERS_IDS, (username,)).fetchone()
+        return connection.execute(VIEW_WATCHED_MOVIES, (user_id[0],)).fetchall()
