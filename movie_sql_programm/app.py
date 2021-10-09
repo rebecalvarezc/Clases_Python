@@ -1,6 +1,8 @@
 from datetime import datetime
 import global_functions
 from pprint import pprint
+import os
+
 
 MAIN_MENU = """\nWelcome to the watchlist app!
 Please select one of the following options:
@@ -63,6 +65,7 @@ def add_watched_movie():
 
 def user_interface():
     while (user_selection := int(input(MAIN_MENU))) != 7:
+        os.system('cls')
         global_functions.create_database()
         if user_selection == 1:
             add_function()
