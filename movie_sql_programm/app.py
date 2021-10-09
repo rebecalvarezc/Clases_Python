@@ -1,8 +1,7 @@
 from datetime import datetime
-import global_functions
 from pprint import pprint
 import os
-
+import global_functions as gf
 
 MAIN_MENU = """\nWelcome to the watchlist app!
 Please select one of the following options:
@@ -21,7 +20,7 @@ def add_function():
     movie_name = input('Movie name: ').title()
     date = input('Release date (dd-mm-yyyy): ')
     release_date = datetime.strptime(date, '%d-%m-%Y').timestamp()
-    added = global_functions.add_movies(movie_name, release_date)
+    added = gf.add_movies(movie_name, release_date)
     if added:
         print('Movie successfully added :)\n')
     else:
@@ -37,7 +36,7 @@ def print_movies(movies: list):
 
 
 def show_upcoming_movies():
-    any_upcoming_movie = global_functions.get_movies(True)
+    any_upcoming_movie = gf.get_movies(True)
     if not any_upcoming_movie:
         print('There aren\'t any upcoming movies.')
     else:
@@ -48,11 +47,11 @@ def show_upcoming_movies():
 
 def add_watched_movie():
     while True:
-        print_movies(global_functions.get_movies())
+        print_movies(gf.get_movies())
         try:
             user = input('Username: ')
             movie_id = int(input('Movie ID: '))
-            movie_watched = global_functions.new_watched_movie(user, movie_id)
+            movie_watched = gf.new_watched_movie(user, movie_id)
             if movie_watched:
                 print('Movie added to the list :)')
             else:
@@ -66,7 +65,7 @@ def add_watched_movie():
 def user_interface():
     while (user_selection := int(input(MAIN_MENU))) != 7:
         os.system('cls')
-        global_functions.create_database()
+        gf.create_database()
         if user_selection == 1:
             add_function()
 
@@ -75,7 +74,7 @@ def user_interface():
 
         elif user_selection == 3:
             print('-- All movies --')
-            movies = global_functions.get_movies()
+            movies = gf.get_movies()
             print_movies(movies)
             print('------')
 
@@ -84,7 +83,7 @@ def user_interface():
 
         elif user_selection == 5:
             username = input('Username: ')
-            watched_movies = global_functions.view_watched_movies(username)
+            watched_movies = gf.view_watched_movies(username)
             if not watched_movies:
                 print('There are no watched movies on your list.')
             else:
@@ -94,7 +93,7 @@ def user_interface():
             name = input('Introduce your name: ').title()
             last_name = input('Introduce your last name: ').title()
             user_name = input('Introduce your username: ').lower()
-            global_functions.add_user(name, last_name, user_name)
+            gf.add_user(name, last_name, user_name)
             print('User added successfully!')
 
         else:

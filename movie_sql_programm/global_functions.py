@@ -1,6 +1,6 @@
-from database_queries import *
-import sqlite3
 from datetime import datetime
+import sqlite3
+from database_queries import *
 
 connection = sqlite3.connect('movie_database.db')
 
