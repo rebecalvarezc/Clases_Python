@@ -12,7 +12,7 @@ def create_database():
     with connection:
         connection.execute(CREATE_MOVIE_TABLE)
         connection.execute(CREATE_USER_TABLE)
-        connection.execute(CREATE_WATCHED_TABLE)  # esto se puede resumir?
+        connection.execute(CREATE_WATCHED_TABLE)
 
 
 def add_movies(movie_name: str, release_date: float) -> bool:

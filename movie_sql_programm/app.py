@@ -29,10 +29,8 @@ def add_function():
 
 
 def print_movies(movies: list):
-    for movie in movies:
-        movie_id = movie[0]
-        title = movie[1]
-        release_date = datetime.fromtimestamp(movie[2])
+    for movie_id, title, release_timestamp in movies:
+        release_date = datetime.fromtimestamp(release_timestamp)
         pprint(f'{movie_id}: {title} (on {release_date.strftime("%b %d %Y")})')
 
 
