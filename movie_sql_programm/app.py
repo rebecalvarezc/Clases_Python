@@ -11,7 +11,8 @@ Please select one of the following options:
 4.- Add watched movies.
 5.- View watched movies.
 6.- Add user to the app.
-7.- Exit.
+7.- Search a movie by title.
+8.- Exit.
 
 Your selection: """
 
@@ -63,7 +64,7 @@ def add_watched_movie():
 
 
 def user_interface():
-    while (user_selection := int(input(MAIN_MENU))) != 7:
+    while (user_selection := int(input(MAIN_MENU))) != 8:
         os.system('cls')
         gf.create_database()
         if user_selection == 1:
@@ -95,6 +96,14 @@ def user_interface():
             user_name = input('Introduce your username: ').lower()
             gf.add_user(name, last_name, user_name)
             print('User added successfully!')
+
+        elif user_selection == 7:
+            title = input('Introduce the movie title: ').title()
+            found_movie = gf.search_movies(title)
+            if found_movie:
+                print_movies(found_movie)
+            else:
+                print('Movie not found.')
 
         else:
             print('Introduce a valid option.')

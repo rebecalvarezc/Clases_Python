@@ -45,4 +45,5 @@ VIEW_WATCHED_MOVIES = """SELECT *
         ON users.user_id = watched_movies.user_id
         WHERE users.username = ?;"""
 
+SEARCH_MOVIE = """SELECT * FROM movies WHERE title LIKE ?;"""
 

@@ -87,3 +87,13 @@ def view_watched_movies(username: str) -> list[tuple]:
     """
     with connection:
         return connection.execute(VIEW_WATCHED_MOVIES, (username,)).fetchall()
+
+
+def search_movies(title: str):
+    """
+    This function allows to user to search a movie that contains on its title the information the user provides.
+    :param1 title: movie title
+    """
+    with connection:
+        search = '%' + title + '%'
+        return list(connection.execute(SEARCH_MOVIE, (search,)))
