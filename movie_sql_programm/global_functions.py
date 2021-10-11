@@ -86,5 +86,4 @@ def view_watched_movies(username: str) -> list[tuple]:
     :return: list[tuple]
     """
     with connection:
-        user_id = connection.execute(USERS_IDS, (username,)).fetchone()
-        return connection.execute(VIEW_WATCHED_MOVIES, (user_id[0],)).fetchall()
+        return connection.execute(VIEW_WATCHED_MOVIES, (username,)).fetchall()
