@@ -20,7 +20,6 @@ CREATE_WATCHED_TABLE = """ CREATE TABLE IF NOT EXISTS watched_movies (
     FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
 );"""
 
-
 CHECK_MOVIE = "SELECT title, release_timestamp FROM movies WHERE title = ? AND release_timestamp = ? LIMIT 1;"
 
 INSERT_MOVIE = "INSERT INTO movies (title, release_timestamp) VALUES (?, ?);"
@@ -46,4 +45,3 @@ VIEW_WATCHED_MOVIES = """SELECT *
         WHERE users.username = ?;"""
 
 SEARCH_MOVIE = """SELECT * FROM movies WHERE title LIKE ?;"""
-
