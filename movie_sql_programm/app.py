@@ -5,6 +5,7 @@ import global_functions as gf
 
 MAIN_MENU = """\nWelcome to the watchlist app!
 Please select one of the following options:
+
 1.- Add a new movie.
 2.- View upcoming movies.
 3.- View all movies.
