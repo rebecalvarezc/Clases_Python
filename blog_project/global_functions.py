@@ -3,6 +3,7 @@ import sqlite3
 from queries import *
 
 connection = sqlite3.connect('rebeca_blog_database.db')
+cursor = connection.cursor()
 
 
 def create_database():
@@ -16,5 +17,5 @@ def create_database():
 def add_post(author: str, title: str, post_len: str, date: str):
     char_len = len(post_len)
     print(char_len)
-    with connection:
-        connection.execute(INSERT_POST_INFO, (author, title, char_len, date))
+    with cursor:
+        cursor.execute(INSERT_POST_INFO, (author, title, char_len, date))
