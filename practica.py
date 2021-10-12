@@ -99,3 +99,5 @@ st.write(color)
 st.echo()
 with st.echo():
     st.write('A + B = C')
+
+st.write('🐱‍🚀')
