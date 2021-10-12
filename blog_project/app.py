@@ -96,8 +96,11 @@ def main():
                 st.error('No posts found.')
         else:
             post_author = '%' + search_term + '%'
-            show_authors = search(True, post_author)
-            st.write(show_authors)
+            show_authors = search(False, post_author)
+            if show_authors:
+                pass
+            else:
+                st.error('No posts found.')
 
     else:
         st.selectbox('Unique Title: ', [])
