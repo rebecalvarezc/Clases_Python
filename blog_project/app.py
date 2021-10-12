@@ -53,6 +53,7 @@ def search(condition: bool, search_entry: str):
         else:
             return connection.execute(SEARCH_POSTS_BY_AUTHOR, (search_entry,)).fetchall()
 
+
 # ---------- STREAMLIT ---------
 
 
@@ -99,7 +100,17 @@ def main():
             st.write(show_authors)
 
     else:
-        pass
+        st.selectbox('Unique Title: ', [])
+        delete = st.button('Delete')
+        metrics = st.checkbox('Metrics')
+        word_cloud = st.checkbox('Word Cloud')
+        plot = st.checkbox('BarH Plot')
+        if delete:
+            pass
+        elif metrics or word_cloud or plot:
+            pass
+        else:
+            pass
 
 
 if __name__ == '__main__':
