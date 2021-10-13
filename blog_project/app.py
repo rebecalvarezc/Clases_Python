@@ -97,7 +97,7 @@ def main():
     elif choice == 'View Posts':
         st.subheader('View Articles')
         recent_posts = []
-        for x in select_recent_posts():
+        for x in set(select_recent_posts()):
             for y in x:
                 recent_posts.append(y)  # no pude hacerlo por secuencias de comprensión. preguntar
         date = st.sidebar.selectbox('View Posts', recent_posts)
@@ -130,7 +130,9 @@ def main():
         # se le podría agregar un botón al search?
         search_term = st.text_input('Enter search term:').title()
         column = st.radio('Field to search by:', ['title', 'author'])
-        if column == 'title':
+        if search_term == '':
+            pass
+        elif column == 'title':
             post_title = '%' + search_term + '%'
             show_titles = search(True, post_title)
             if show_titles:
