@@ -2,6 +2,11 @@ from datetime import datetime
 import streamlit as st
 import sqlite3
 
+# ------- HTML ---------
+html_template = """
+    <div style = "background-color: {}; padding: 10px; border-radius: 10px">
+    <h1 style = "color: {}; text-align:center;">Rebeca\'s Blog </h1>
+    </div>"""
 # ----- QUERIES -------
 CREATE_TABLE = """CREATE TABLE IF NOT EXISTS posts (
     post_id INTEGER NOT NULL UNIQUE,
@@ -57,7 +62,7 @@ def search(condition: bool, search_entry: str):
 
 
 def main():
-    st.header('Rebeca\'s Blog')
+    st.markdown(html_template.format('dark salmon', 'black'), unsafe_allow_html=True)
     menu = ['Home', 'View Posts', 'Add Posts', 'Search', 'Manage Blog']
     choice = st.sidebar.selectbox('Menu', menu)
     create_database()
@@ -102,6 +107,7 @@ def main():
                 st.error('No posts found.')
 
     else:
+        # Aquí me falta la tabla
         st.selectbox('Unique Title: ', [])
         delete = st.button('Delete')
         metrics = st.checkbox('Metrics')
