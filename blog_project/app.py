@@ -3,17 +3,26 @@ import streamlit as st
 import sqlite3
 
 # ------- HTML ---------
+
 html_template = """
     <div style = "background-color: {}; padding: 10px; border-radius: 10px">
-    <h1 style = "color: {}; text-align:center;">Rebeca\'s Blog </h1>
+    <h1 style = "color: {}; text-align:center;font-family:serif;">Rebeca\'s Blog </h1>
     </div>"""
 
 html_articles = """
     <div style = "background-color: {}; padding: 5px; border-radius: 10px">
-    <h2 style = "color: {}; text-align:center; font-size: 32px;"> {} </h2>
-    <h4 style = "color: {}; text-align:center; font-size: 16px;"> {} </h4>
+    <h2 style = "color: {}; text-align:center; font-size: 32px; font-family:serif;"> {} </h2>
+    <h4 style = "color: {}; text-align:center; font-size: 16px; font-family:sans serif;"> {} </h4>
     <br>
-    <p> {} </p>
+    <p style = "font-family:serif;"> {} </p>
+    </div>
+    <br>"""
+
+html_list = """
+<div style = " border: 1px solid {}; margin: 1px 1px; border-radius: 10px">
+    <ul style = "list-style-type: none; color: {}; text-align:center; font-size: 32px; font-family:serif;"> 
+    <li> {} </li>
+    </ul>
     </div>
     <br>"""
 # ----- QUERIES -------
@@ -125,14 +134,16 @@ def main():
             post_title = '%' + search_term + '%'
             show_titles = search(True, post_title)
             if show_titles:
-                pass
+                for x in show_titles:
+                    st.markdown(html_list.format('lightcoral', 'black', x[0]), unsafe_allow_html=True)
             else:
                 st.error('No posts found.')
         else:
             post_author = '%' + search_term + '%'
             show_authors = search(False, post_author)
             if show_authors:
-                pass
+                for x in show_authors:
+                    st.markdown(html_list.format('lightcoral', 'black', x[0]), unsafe_allow_html=True)
             else:
                 st.error('No posts found.')
 
