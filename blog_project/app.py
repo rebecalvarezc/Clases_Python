@@ -19,12 +19,12 @@ html_articles = """
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <div style = "background-color: {}; padding: 5px; border-radius: 10px">
-    <img src="https://thumbs.dreamstime.com/b/watercolor-image-three-hearts-different-shades-red-color-even-row-colorful-isolated-white-background-illustration-204347554.jpg" 
-    width= "100px" height= "50px"/>
+    <img src="https://www.pikpng.com/pngl/b/306-3065627_instagram-heart-png-clipart-background-discord-heart-emoji.png" 
+    width= "70px" height= "50px"/>
     <h2 style = "color: {}; text-align:center; font-size: 32px; font-family:'Playfair Display', serif;"> {} </h2>
     <h4 style = "color: {}; text-align:center; font-size: 16px; font-family:'Roboto', sans serif;"> {} </h4>
     <br>
-    <p style = "font-family:'Roboto', serif; padding: 3px"> {} </p>
+    <p style = "font-family:'Roboto', serif; padding: 8px"> {} </p>
     </div>
     <br>"""
 
