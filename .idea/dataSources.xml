@@ -22,5 +22,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Rebeca\PycharmProjects\Clases_Python\movie_sql_programm\movie_database.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="rebeca_blog_database" uuid="419565df-8392-4b0f-819e-76a107600a57">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Rebeca\PycharmProjects\Clases_Python\blog_project\rebeca_blog_database.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

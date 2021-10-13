@@ -9,11 +9,13 @@ html_template = """
     </div>"""
 
 html_articles = """
-    <div style = "background-color: {}; padding: 5px; border-radius: 5px">
-    <h2 style = "color: {}; text-align:center;"> {} </h2>
-    <h4 style = "color: {}; text-align:center;"> {} </h4>
+    <div style = "background-color: {}; padding: 5px; border-radius: 10px">
+    <h2 style = "color: {}; text-align:center; font-size: 32px;"> {} </h2>
+    <h4 style = "color: {}; text-align:center; font-size: 16px;"> {} </h4>
+    <br>
     <p> {} </p>
-    </div>"""
+    </div>
+    <br>"""
 # ----- QUERIES -------
 CREATE_TABLE = """CREATE TABLE IF NOT EXISTS posts (
     post_id INTEGER NOT NULL UNIQUE,
@@ -24,7 +26,7 @@ CREATE_TABLE = """CREATE TABLE IF NOT EXISTS posts (
     post_date TEXT NOT NULL,
     PRIMARY KEY (post_id AUTOINCREMENT))"""
 
-INSERT_POST_INFO = "INSERT INTO posts (post_author, post_title, post_len,, post_content, post_date) VALUES (?,?,?,?,?);"
+INSERT_POST_INFO = "INSERT INTO posts (post_author, post_title, post_len, post_content, post_date) VALUES (?,?,?,?,?);"
 
 SELECT_RECENT_POSTS = "SELECT post_date FROM posts ORDER BY post_id DESC LIMIT 5;"
 
@@ -77,7 +79,7 @@ def search_by_date(date: str):
 
 
 def main():
-    st.markdown(html_template.format('dark salmon', 'black'), unsafe_allow_html=True)
+    st.markdown(html_template.format('darksalmon', 'black'), unsafe_allow_html=True)
     menu = ['Home', 'View Posts', 'Add Posts', 'Search', 'Manage Blog']
     choice = st.sidebar.selectbox('Menu', menu)
     create_database()
@@ -90,15 +92,19 @@ def main():
             for y in x:
                 recent_posts.append(y)  # no pude hacerlo por secuencias de comprensión. preguntar
         date = st.sidebar.selectbox('View Posts', recent_posts)
-        try:
-            posts = search_by_date(date)
-            if posts:
-                st.markdown(html_articles.format('lavenderblush', 'black', posts[1], 'black', posts[0], posts[2]),
+        # try:
+        posts = search_by_date(date)
+        if posts:
+            for x in posts:
+                title = x[1]
+                author = x[0]
+                content = x[2]
+                st.markdown(html_articles.format('lavenderblush', 'black', title, 'black', author, content),
                             unsafe_allow_html=True)
-            else:
-                print('No posts found.')
-        except:
-           st.warning('An error has occurred. We will try to fix it as soon as possible.')
+        else:
+            st.write('No posts found.')
+        # except:
+        #     st.warning('An error has occurred. We will try to fix it as soon as possible.')
 
     elif choice == 'Add Posts':
         st.subheader('Add Articles')
