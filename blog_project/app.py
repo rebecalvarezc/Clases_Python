@@ -1,3 +1,4 @@
+from datetime import datetime
 import streamlit as st
 import sqlite3
 
@@ -49,11 +50,13 @@ INSERT_POST_INFO = "INSERT INTO posts (post_author, post_title, post_len, post_c
 
 SELECT_RECENT_POSTS = "SELECT post_date FROM posts ORDER BY post_id DESC LIMIT 5;"
 
-SEARCH_POSTS_BY_TITLE = "SELECT post_title FROM posts WHERE post_title LIKE ? LIMIT 3;"
+SEARCH_POSTS_BY_TITLE = "SELECT post_title, post_author, post_content FROM posts WHERE post_title LIKE ? LIMIT 3;"
 
-SEARCH_POSTS_BY_AUTHOR = "SELECT post_title FROM posts WHERE post_author LIKE ? LIMIT 3;"
+SEARCH_POSTS_BY_AUTHOR = "SELECT post_title, post_author, post_content FROM posts WHERE post_author LIKE ? LIMIT 3;"
 
 SEARCH_BY_DATE = "SELECT post_author, post_title, post_content FROM posts WHERE post_date = ?;"
+
+HOME_POST = "SELECT post_title, post_author, post_content FROM posts ORDER BY post_date DESC LIMIT 3"
 
 # ------- FUNCTIONS --------
 connection = sqlite3.connect('rebeca_blog_database.db')
@@ -94,6 +97,11 @@ def search_by_date(date: str):
         return connection.execute(SEARCH_BY_DATE, (date,)).fetchall()
 
 
+def home_post():
+    with connection:
+        return connection.execute(HOME_POST).fetchall()
+
+
 # ---------- STREAMLIT ---------
 
 
@@ -105,7 +113,10 @@ def main():
 
     if choice == 'Home':
         st.subheader('Home')
-
+        last_post = home_post()
+        for title, author,content in last_post:
+            st.markdown(html_articles.format('lavenderblush', 'black', title, 'black', author, content),
+                        unsafe_allow_html=True)
     elif choice == 'View Posts':
         st.subheader('View Articles')
         recent_posts = []
@@ -142,16 +153,18 @@ def main():
             post_title = '%' + search_term + '%'
             show_titles = search(True, post_title)
             if show_titles:
-                for x in show_titles:
-                    st.markdown(html_list.format('lightcoral', 'black', x[0]), unsafe_allow_html=True)
+                for title, author, content in show_titles:
+                    st.markdown(html_articles.format('lavenderblush', 'black', title, 'black', author, content),
+                                unsafe_allow_html=True)
             else:
                 st.error('No posts found.')
         else:
             post_author = '%' + search_term + '%'
             show_authors = search(False, post_author)
             if show_authors:
-                for x in show_authors:
-                    st.markdown(html_list.format('lightcoral', 'black', x[0]), unsafe_allow_html=True)
+                for title, author, content in show_authors:
+                    st.markdown(html_articles.format('lavenderblush', 'black', title, 'black', author, content),
+                                unsafe_allow_html=True)
             else:
                 st.error('No posts found.')
 
