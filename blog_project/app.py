@@ -1,20 +1,29 @@
-from datetime import datetime
 import streamlit as st
 import sqlite3
 
 # ------- HTML ---------
 
 html_template = """
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <div style = "background-color: {}; padding: 10px; border-radius: 10px">
-    <h1 style = "color: {}; text-align:center;font-family:serif;">Rebeca\'s Blog </h1>
+    <h1 style = "color: {}; text-align:center;font-family:'Playfair Display', serif;">Rebeca\'s Blog </h1>
     </div>"""
 
 html_articles = """
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <div style = "background-color: {}; padding: 5px; border-radius: 10px">
-    <h2 style = "color: {}; text-align:center; font-size: 32px; font-family:serif;"> {} </h2>
-    <h4 style = "color: {}; text-align:center; font-size: 16px; font-family:sans serif;"> {} </h4>
+    <img src="blog_project/images/hearts.png" width: "10px" height: "10px"/>
+    <h2 style = "color: {}; text-align:center; font-size: 32px; font-family:'Playfair Display', serif;"> {} </h2>
+    <h4 style = "color: {}; text-align:center; font-size: 16px; font-family:'Roboto', sans serif;"> {} </h4>
     <br>
-    <p style = "font-family:serif;"> {} </p>
+    <p style = "font-family:'Roboto', serif;"> {} </p>
     </div>
     <br>"""
 
@@ -32,7 +41,7 @@ CREATE_TABLE = """CREATE TABLE IF NOT EXISTS posts (
     post_title TEXT NOT NULL,
     post_len INTEGER NOT NULL,
     post_content TEXT NOT NULL,
-    post_date TEXT NOT NULL,
+    post_date DATE NOT NULL,
     PRIMARY KEY (post_id AUTOINCREMENT))"""
 
 INSERT_POST_INFO = "INSERT INTO posts (post_author, post_title, post_len, post_content, post_date) VALUES (?,?,?,?,?);"
@@ -92,8 +101,10 @@ def main():
     menu = ['Home', 'View Posts', 'Add Posts', 'Search', 'Manage Blog']
     choice = st.sidebar.selectbox('Menu', menu)
     create_database()
+
     if choice == 'Home':
         st.subheader('Home')
+
     elif choice == 'View Posts':
         st.subheader('View Articles')
         recent_posts = []
@@ -101,26 +112,20 @@ def main():
             for y in x:
                 recent_posts.append(y)  # no pude hacerlo por secuencias de comprensión. preguntar
         date = st.sidebar.selectbox('View Posts', recent_posts)
-        # try:
         posts = search_by_date(date)
         if posts:
-            for x in posts:
-                title = x[1]
-                author = x[0]
-                content = x[2]
+            for author, title, content in posts:
                 st.markdown(html_articles.format('lavenderblush', 'black', title, 'black', author, content),
                             unsafe_allow_html=True)
         else:
             st.write('No posts found.')
-        # except:
-        #     st.warning('An error has occurred. We will try to fix it as soon as possible.')
 
     elif choice == 'Add Posts':
         st.subheader('Add Articles')
         author = st.text_input('Enter Author\'s Name:', max_chars=50).title()
         post_title = st.text_input('Enter Post Title:')
         article = st.text_area('Post Article here:', height=50)
-        date = st.text_input('Date:', datetime.now().strftime("%Y/%m/%d "))
+        date = st.date_input('Date:')
 
         if st.button('Add'):
             add_post(author, post_title, article, date)
