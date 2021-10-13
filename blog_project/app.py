@@ -50,8 +50,7 @@ def search(condition: bool, search_entry: str):
     with connection:
         if condition:
             return connection.execute(SEARCH_POSTS_BY_TITLE, (search_entry,)).fetchall()
-        else:
-            return connection.execute(SEARCH_POSTS_BY_AUTHOR, (search_entry,)).fetchall()
+        return connection.execute(SEARCH_POSTS_BY_AUTHOR, (search_entry,)).fetchall()
 
 
 # ---------- STREAMLIT ---------
@@ -86,8 +85,8 @@ def main():
     elif choice == 'Search':
         # se le podría agregar un botón al search?
         search_term = st.text_input('Enter search term:').title()
-        colum = st.radio('Field to search by:', ['title', 'author'])
-        if colum == 'title':
+        column = st.radio('Field to search by:', ['title', 'author'])
+        if column == 'title':
             post_title = '%' + search_term + '%'
             show_titles = search(True, post_title)
             if show_titles:
