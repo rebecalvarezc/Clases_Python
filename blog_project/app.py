@@ -98,7 +98,7 @@ def search_by_date(date: str):
 
 
 def main():
-    st.markdown(html_template.format('darksalmon', 'black'), unsafe_allow_html=True)
+    st.markdown(html_template.format('#ee4466', 'black'), unsafe_allow_html=True)
     menu = ['Home', 'View Posts', 'Add Posts', 'Search', 'Manage Blog']
     choice = st.sidebar.selectbox('Menu', menu)
     create_database()
