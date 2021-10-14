@@ -32,7 +32,7 @@ def access_currency_info() -> dict:
     return {}
 
 
-def currency_rate_exchange():
+def currency_rate_exchange() -> None:
     """
     This function uses the info collected from the API & the json file to show the user the currency exchange.
     """
