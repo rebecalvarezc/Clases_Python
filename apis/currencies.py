@@ -4,13 +4,14 @@ import requests  # Crear un requirements txt al separar este proyecto en otro re
 from pprint import pprint
 
 # enter your API key in the string below:
-api_key = '93e0b79c3a299c6beb5c0784ab4719b1'
+api_key = ''
 endpoint = f'http://data.fixer.io/api/latest?access_key={api_key}'
 
 MENU = """Welcome to your currency converter.
         - Press 1 to convert.
         - Press 2 to stop the app.
         --> """
+
 
 def import_jason() -> dict:
     """
@@ -20,6 +21,7 @@ def import_jason() -> dict:
     with open('currency_data.json', 'r', encoding='utf-8') as data:
         currency_data = json.load(data)
     return currency_data
+
 
 def access_currency_info() -> dict:
     """
@@ -36,13 +38,20 @@ def currency_rate_exchange():
     """
     This function uses the info collected from the API & the json file to show the user the currency exchange.
     """
-    amount = float(input('\nEnter the amount you want to convert: '))
-    _fromCurrency = input('Enter your from currency: ').upper()
-    _toCurrency = input('Enter your to currency: ').upper()
-    rates = access_currency_info()
-    currency_data = import_jason()
-    conversion = round(amount * rates[_toCurrency] / rates[_fromCurrency], 2)
-    print(f'{amount}{currency_data[_fromCurrency]["symbol"]} equals to {conversion}{currency_data[_toCurrency]["symbol"]}\n')
+    try:
+        amount = float(input('\nEnter the amount you want to convert: '))
+        currency_data = import_jason()
+        _fromCurrency = input('\nEnter your from currency: ').upper()
+        _toCurrency = input('Enter your to currency: ').upper()
+        rates = access_currency_info()
+        conversion = round(amount * rates[_toCurrency] / rates[_fromCurrency], 2)
+        print(
+            f'{amount}{currency_data[_fromCurrency]["symbol"]} equals to {conversion}{currency_data[_toCurrency]["symbol"]}\n')
+    except KeyError:
+        print('Currency not found.\n')
+
+    except ValueError:
+        print('Introduce a valid amount.\n')
 
 
 if __name__ == '__main__':
