@@ -1,7 +1,5 @@
-from http import server
 import json
 import requests  # Crear un requirements txt al separar este proyecto en otro repositorio
-from pprint import pprint
 
 # enter your API key in the string below:
 api_key = ''
@@ -40,10 +38,10 @@ def currency_rate_exchange():
     """
     try:
         amount = float(input('\nEnter the amount you want to convert: '))
-        currency_data = import_jason()
         _fromCurrency = input('\nEnter your from currency: ').upper()
         _toCurrency = input('Enter your to currency: ').upper()
         rates = access_currency_info()
+        currency_data = import_jason()
         conversion = round(amount * rates[_toCurrency] / rates[_fromCurrency], 2)
         print(
             f'{amount}{currency_data[_fromCurrency]["symbol"]} equals to {conversion}{currency_data[_toCurrency]["symbol"]}\n')
