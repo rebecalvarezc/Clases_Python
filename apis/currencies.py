@@ -12,6 +12,14 @@ MENU = """Welcome to your currency converter.
         - Press 2 to stop the app.
         --> """
 
+def import_jason() -> dict:
+    """
+    This function recovers the data from the attached json, which have information about the currencies.
+    :returns: dict
+    """
+    with open('currency_data.json', 'r', encoding='utf-8') as data:
+        currency_data = json.load(data)
+    return currency_data
 
 def access_currency_info() -> dict:
     """
@@ -25,18 +33,21 @@ def access_currency_info() -> dict:
 
 
 def currency_rate_exchange():
-    amount = float(input('Enter the amount you want to convert: '))
+    """
+    This function uses the info collected from the API & the json file to show the user the currency exchange.
+    """
+    amount = float(input('\nEnter the amount you want to convert: '))
     _fromCurrency = input('Enter your from currency: ').upper()
     _toCurrency = input('Enter your to currency: ').upper()
     rates = access_currency_info()
+    currency_data = import_jason()
     conversion = round(amount * rates[_toCurrency] / rates[_fromCurrency], 2)
-    return f'{amount}{}'
+    print(f'{amount}{currency_data[_fromCurrency]["symbol"]} equals to {conversion}{currency_data[_toCurrency]["symbol"]}\n')
 
 
 if __name__ == '__main__':
-
     while user_input := int(input(MENU)) != 2:
-        if user_input == 11:
+        if user_input == 1:
             currency_rate_exchange()
         else:
             print('Please select a valid option.')
