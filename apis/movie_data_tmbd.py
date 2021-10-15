@@ -3,9 +3,8 @@ import requests
 
 # Use your API key or Token from themoviedb.org
 
-api_key = '62e2db2703f0f47b36597e80aacceb08'
-api_token = '''eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MmUyZGIyNzAzZjBmNDdiMzY1OTdlODBhYWNjZWIwOCIsInN1YiI6IjYxNjk1MWE
-yMTA4OWJhMDA5NWVhYzBhOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IAsIE5Va6MMFOEjiWD89cCLjb0Dek0eOPG-AyHUHmkg'''
+api_key = ' '
+api_token = ''' '''
 
 # HTTP requests
 """
