@@ -76,3 +76,51 @@ It is inline by default.*/
     font-size: 16px;
     color: white;
 }
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 30px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: bisque;
+    color: maroon;
+    transition: 0.2s;
+}
+
+/*this is a media rule and is used in media queries to apply different styles for different media types/devices.
+Media queries can be used to check: width and height of the viewport/device, orientation and resolution.
+Used for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+Can be used to specify that certain styles are only for printed documents or screen readers
+*/
+@media(max-width: 700px){
+    .text-box h1{
+    font-size: 24px;
+}
+    .text-box p{
+        margin: 1px 0 5px; /*top, left/right bottom*/
+        font-size: 11px;
+    }
+    .button{
+        font-size: 9px;
+    }
+    .nav-link ul li{
+        display: block;
+        font-size: 9px;
+    }
+    .nav-link{
+        position: absolute;
+        background: rgba(255, 228, 196, 0.7);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
