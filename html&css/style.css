@@ -1,10 +1,10 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /*Empty space around my element*/
+    padding: 0; /*creates empty space WITH background around my element.*/
     font-family: 'Scheherazade New', serif;
     overflow-x: hidden;
 }
-
+/*Border, margin & padding add to the width of the element as well as the height.*/
 .header{
     min-height: 100vh;
     /* vh: 	Relative to 1% of the height of the viewport.
@@ -12,8 +12,8 @@
     width: 100%;
     height: 100%;
     background-image: url(images/background2.jpg);
-    background-position: center;
-    background-size: cover;
+    background-position: center; /*Center of the div*/
+    background-size: cover; /*Covers the entire div with your picture. No repeating*/
     position: relative;
 }
 
@@ -39,8 +39,8 @@
     font-size: 14px;
     font-weight: bold;
 }
-.nav-link ul li::after{
-    content: '';
+.nav-link ul li::after{ /*after es un pseudo elemento y usa dos ::. NOTA: los pseudo elementos no funcionan en img*/
+    content: ''; /*si no se pone it defaults to none y no pasa nada.*/
     width: 0;
     height: 2px;
     background-color: maroon;
@@ -52,8 +52,8 @@
 It is often used to add cosmetic content to an element with the content property.
 It is inline by default.*/
 
-.nav-link ul li:hover::after{
-    width: 100%;
+.nav-link ul li:hover::after{ /*hover es una pseudo clase y esa un solo :*/
+    width: 100%; /**/
 }
 
 .text-box{
@@ -80,7 +80,7 @@ It is inline by default.*/
     display: inline-block; /*Evito problemas de que se sobreponga con otros elementos. It's an inline element.*/
     text-decoration: none;
     color: white;
-    border: 2px solid white;
+    border: 2px solid white; /*Literal un borde*/
     padding: 5px 30px;
     font-size: 14px;
     background: transparent;
@@ -88,7 +88,7 @@ It is inline by default.*/
     cursor: pointer;
 }
 .button:hover{
-    background-color: bisque;
+    background-color: floralwhite;
     color: maroon;
     transition: 0.2s;
 }
