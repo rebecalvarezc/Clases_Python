@@ -15,10 +15,11 @@
     background-position: center; /*Center of the div*/
     background-size: cover; /*Covers the entire div with your picture. No repeating*/
     position: relative;
+    margin: 0 auto;
 }
 
 .nav{
-    display: flex;
+    display: flex; /*Display property for the children of this class.*/
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +38,8 @@
     color: #800000;
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: bold; /*Bolder es uno más del weight que ya tenemos, mientras que bold siempre será bold.
+    i.e.:  de light pasamos a normal con bolder*/
 }
 .nav-link ul li::after{ /*after es un pseudo elemento y usa dos ::. NOTA: los pseudo elementos no funcionan en img*/
     content: ''; /*si no se pone it defaults to none y no pasa nada.*/
@@ -52,7 +54,8 @@
 It is often used to add cosmetic content to an element with the content property.
 It is inline by default.*/
 
-.nav-link ul li:hover::after{ /*hover es una pseudo clase y esa un solo :*/
+.nav-link ul li:hover::after{ /*hover es una pseudo clase. tenemos: :link,
+:hover, :visited, :active (while clicking down on the link), :focus (comes out by pushing the tab button)*/
     width: 100%; /**/
 }
 
@@ -75,6 +78,7 @@ It is inline by default.*/
     margin: 1px 0 5px; /*top, left/right bottom*/
     font-size: 16px;
     color: white;
+    /*Para el interlineado usar "line-height" (1,2) */
 }
 .button{
     display: inline-block; /*Evito problemas de que se sobreponga con otros elementos. It's an inline element.*/
@@ -115,14 +119,14 @@ Can be used to specify that certain styles are only for printed documents or scr
         font-size: 9px;
     }
     /*This makes a side bar*/
-    .nav-link{
-        position: absolute;
-        background: rgba(255, 228, 196, 0.7);
-        height: 100vh;
-        width: 25vh;
-        top: 0;
-        left: 0;
-        text-align: left;
-        z-index: 2; /*Specifies the stack order of an element. Only works on positioned elements and flex items*/
-    }
+    /*.nav-link{*/
+    /*    position: absolute;*/
+    /*    background: rgba(255, 228, 196, 0.7);*/
+    /*    height: 100vh;*/
+    /*    width: 25vh;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    text-align: left;*/
+    /*    z-index: 2; !*Specifies the stack order of an element. Only works on positioned elements and flex items*!*/
+    /*}*/
 }
